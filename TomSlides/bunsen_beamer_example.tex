@@ -45,6 +45,7 @@
 % see the macros.tex file for definitions
 \include{macros}
 
+
 % title slide definition
 \title{Security of Near Field Communication:\break Does My Phone Need A Tinfoil Hat?}
 \author{Thomas Harren}
@@ -74,24 +75,74 @@
 
 \begin{frame}
   \frametitle{Outline}
-\tableofcontents
+\tableofcontents[hideallsubsections]
 \end{frame}
+
+\Fontix
 %-------------------------------------------------------------------
 %                          Section 1
 %-------------------------------------------------------------------
 
 \section{Introduction}
-\subsection{Part 1}
+\subsection{Elements of HF RFID: Tags \& Readers}
 \begin{frame}
-  \frametitle{Part 1}
+\frametitle{Tags \& Readers}
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+     \begin{block}{HF RFID Communication}
+		\begin{enumerate}
+		    \item{Reader emits electricity}
+		    \item{Tag is activated by induced power}
+        	\item{Reader runs discovery protocol, selecting tag by unique ID}
+        	\item{Communication ensues}
+   		\end{enumerate}
+    \end{block}
+         \begin{block}{Features}
+		\begin{itemize}
+        	\item{Quick setup}
+        	\item{Line of sight not required}
+   		\end{itemize}
+    \end{block}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    \begin{block}{}
+     \begin{center}
+     Power and Data Transfer
+     \end{center}
+% Your image included here
+    \includegraphics{../TomPaper/figures/emitterAndTag.png}
+    \end{block}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 
-\section{Preliminary findings}
-\subsection{It was bad}
+\subsection{NFC on Mobile Phones}
+\subsection{NFC and the Payment Industry}
+\subsection{Security for NFC}
+\section{Contactless Credit Cards}
+\subsection{Current Credit Card Protocol}
+\subsection{Credit Card Attacks}
+\subsection{Proposed Secure Credit Card Protocol}
+\section{NFC and Mass Transit Ticketing}
+\subsection{Ticketing Architecture}
+\section{EnGarde: A Physical Approach to NFC Security}
+\subsection{No Power Mode}
+\subsection{System Idle Mode}
+\subsection{NFC Decoder Active Mode}
+\subsection{Jam Mode}
+\subsection{Experimental Evaluation of EnGarde}
+\section{Conclusions}
 \begin{frame}
-  \frametitle{Part 1}
+  \frametitle{Conclusions}
+  \begin{block}{Tinfoil Hats for Everyone!}
+  \end{block}
 \end{frame}
+
+
+%-------------------------------------------------------------------
+%                          Sample Slide
+%-------------------------------------------------------------------
 
 \begin{frame}
     \frametitle{Elements in Whoville}
