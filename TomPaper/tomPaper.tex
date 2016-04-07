@@ -211,12 +211,32 @@ Finally, the bank uses the \textit{UUID} to look up official card data. Then the
 Mass transit systems have widely adopted contactless NFC cards for identity verification and ticketing. Three Nokia researchers, Tamrakar, Ekberg, and Asokan, have punished a paper investigating the use of NFC-enabled mobile phones for this application. In their paper, they first describe the the pieces involved in building a complete identity-verification ticketing architecture. Then, three implementations of mobile ticketing, each balancing security and transaction time in a unique way, are introduced, prototyped, and critiqued.\cite{Ticket2011}
 
 \subsection{Ticketing Architecture}
+In order to for NFC on phones to be used for mass transit ticketing, additional infrastructure is required. An overview of the high level components and their iterations is illustrated in~\ref{fig:ticketingArch}.
+
+CA
+hands out identity certificates
+maintains billing information
+clear transactions and maintain blacklist
+
+D
+NFC phone crytopgraphically associated with an account holder by CA
+has TEE
+
+R
+reader at gate
+recieves blacklist updates
+
+TA
+opearting ticket readers and gates
+collects all evidence from D<->R transactions for calculating fares and submitting evidence to the CA
+queries the blacklist and distributes to readers. 
+**TA CA transactions shall not be synchronous to the data transaction between D and R. My be real-time if special blacklist query for user's first time
 
 \begin{figure}
 \centering
 \psfig{file=figures/ticketingArch.png,width=3in,natwidth=700,natheight=189}
-\caption{Ticketing Architecture~\cite{Ticket2011}}
-\label{fig:secureCC}
+\caption{Purposed Credit Card Protocol~\cite{CC2016}}
+\label{fig:ticketingArch}
 \end{figure}
 
 
@@ -229,10 +249,11 @@ Mass transit systems have widely adopted contactless NFC cards for identity veri
 
 \begin{figure}
 \centering
-\psfig{file=figures/states.jpg,width=3in,natwidth=700,natheight=189}
+\psfig{file=figures/states.png,width=3in,natwidth=700,natheight=189}
 \caption{Simplified EnGarde\cite{Gum2013} state digram}
 \label{fig:states}
 \end{figure}
+
 
 Commercial payment systems such as Apple Pay and Android Pay are bringing NFC to our phones, which could introduce security risks in both payment and non-payment applications of NFC. A programmable, hardware-based firewall may be a viable way to defend against more general threats as new applications and attacks are developed. EnGarde is designed to be an extremely power efficient, semi-permanent attachment for everyday mobile phones. Such a device-independent security method, a metaphorical tin foil hat, could offer flexibly against current and evolving attacks on NFC enabled devices.~\cite{Gum2013}
 
