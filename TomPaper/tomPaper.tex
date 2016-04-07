@@ -90,6 +90,8 @@ A mobile phone can also function as if it was a passive tag. This mode can be ef
 \textbf{Phone acting as a peer:}
 When two compatible devices are capable of switching between reader and tag emulation mode, they can communicate directly over NFC in a peer-to-peer manner. Peer-to-peer mode offers the highest communication throughput and can be used to implement stronger security~\cite{Ticket2011} or to coordinate mobile file transfers.~\cite{Gum2013}
 
+\textcolor{blue}{compare to wifi speeds?}
+
 \subsection{NFC and the Payment Industry}
 \label{sec:paymentIndustry}
 Since this paper emphasizes NFC in the context of payments, we will briefly describe the current status of the payment industry.
@@ -105,15 +107,7 @@ The crucial next step would be to explain that Apple Pay and Android Pay are wir
 
 \subsection{Security for NFC}
 \label{sec:backgroundSecurity}
-NFC is a flexible communication technology, but it is not inherently secure. The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to several attacks. As a result, measures to ensure confidentiality, integrity, or authentication need to implemented as an extension of NFC.~\cite{CC2016}
-\vspace{2mm}\newline
-\noindent\textbf{Trusted Hardware:}
-Mobile phones are capable of doing cryptographic operations which are executed in the phone's \textit{trusted execution environment}, or TEE. Several types of TEEs have been developed in the last decade and are now widely deployed on phones. Some TEEs are hardware agnostic while others extend core processing to strengthen security.
-~\cite{Ticket2011}  
-\vspace{2mm}\newline
-\textbf{Secure Communications:}
-There are various methods for securing communication over an insecure channel such as NFC. In a simple symmetric key system, both parties have a secret key that is used to encrypt and decrypt messages at each end of a communication channel. This works very well, but distributing the private key to both parties can present a problem. The public key system works differently than this, requiring a both a private key and a complementary public key. Public keys are distributed and can be used by anyone to encrypt a message that can only be decrypted by the matching private key.~\cite{crypto}
-
+NFC is a flexible communication technology, but it is not inherently secure. The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to several attacks. As a result, measures to ensure confidentiality, integrity, or authentication need to implemented as an extension of NFC. Maintaining security of NFC is the main focus of this paper.~\cite{CC2016}
 
 
 
@@ -217,7 +211,7 @@ They first describe the the pieces involved in building a complete identity-veri
 \begin{figure}
 \centering
 \psfig{file=figures/ticketingArch.png,width=3in,natwidth=700,natheight=189}
-\caption{Proposed Credit Card Protocol~\cite{CC2016}}
+\caption{Proposed Credit Card Protocol~\cite{Ticket2011}}
 \label{fig:ticketingArch}
 \end{figure}
 
@@ -225,7 +219,20 @@ For NFC phones to be used for mass transit ticketing, additional infrastructure 
 
 The authors note that TA$\leftrightarrow$CA transactions will not be synchronous to the D$\leftrightarrow$R data transaction. This way, the ticket lines will not be slowed, with the exception of special blacklist query for user's first transit ride.
 
+\subsection{Security Tools}
+The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to several attacks. In order to maintain secure communication, several standard security and cryptography tools will be used.
+\vspace{2mm}\newline
+\noindent\textbf{Trusted Hardware:}
+Mobile phones are capable of doing cryptographic operations which are executed in the phone's \textit{trusted execution environment}, or TEE. Several types of TEEs have been developed in the last decade and are now widely deployed on phones. Some TEEs are hardware agnostic while others extend core processing to strengthen security.
+~\cite{Ticket2011}  
+\vspace{2mm}\newline
+\textbf{Secure Communications:}
+There are various methods for securing communication over an insecure channel such as NFC. In a simple symmetric key system, both parties have a secret key that is used to encrypt and decrypt messages at each end of a communication channel. This works very well, but distributing the private key to both parties can present a problem. The public key system works differently than this, requiring a both a private key and a complementary public key. Public keys are distributed and can be used by anyone to encrypt a message that can only be decrypted by the matching private key.~\cite{crypto}
+
 \subsection{Standard Protocol}
+In the standard protocol, D uses WLAN or mobile data to attain a transport ID from CA that is valid for several months. The transport ID takes the form of a \textit{certificate}. A certificate is a digital document containing attributes associated to the holder, in this case D, from the trusted issuer, the CA. \textcolor{blue}{[wiki/~\cite{crypto}?]} The standards-compliant X.509 certificate standard is typically used, but its size is too large for this application. Instead, the Nokia researchers have chosen to use an optimized certificate containing an expiration date, the identity of D, and a public key to be used by R in decoding messages from D. The drawback of using the certificate, however, lies in the large keys required by \textit{RSA}, the chosen public-key cryptography system, which will take substantial time to transmit over NFC.
+ 
+Several steps occur in a standard D$\leftrightarrow$R transaction. First, R sends its identity and a random challenge to D.
 
 \subsection{Variant 1}
 
