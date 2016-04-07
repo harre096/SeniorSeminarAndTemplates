@@ -232,9 +232,10 @@ There are various methods for securing communication over an insecure channel su
 \subsection{Standard Protocol}
 In the standard protocol, D uses WLAN or mobile data to attain a transport ID from CA that is valid for several months. The transport ID takes the form of a \textit{certificate}. A certificate is a digital document containing attributes associated to the holder, in this case D, from the trusted issuer, the CA. \textcolor{blue}{[wiki/~\cite{crypto}?]} The standards-compliant X.509 certificate standard is typically used, but its size is too large for this application. Instead, the Nokia researchers have chosen to use an optimized certificate containing an expiration date, the identity of D, and a public key to be used by R in decoding messages from D. The drawback of using the certificate, however, lies in the large keys required by \textit{RSA}, the chosen public-key cryptography system, which will take substantial time to transmit over NFC.
  
-Several steps occur in a standard D$\leftrightarrow$R transaction. First, R sends its identity and a random challenge to D.
+Several steps occur in a standard D$\leftrightarrow$R transaction. First, R initiates communication, sending its identity and a random challenge to D. D then responds by sending back its transport ID certificate. Next, D uses its private key to generate a signature using the challenge and identities of both D and R. Finally, R verifies all of the information, checks D against its blacklist, opens the transit gate, and forwards all transaction to the TA. D also keeps a evidence of the transaction which can be used to prove ticket purchases.
 
 \subsection{Variant 1}
+In variant 1, the certificate is replace by a significantly-smaller, quickly-expiring token.
 
 \subsection{Variant 2}
 
