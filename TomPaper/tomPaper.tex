@@ -100,6 +100,8 @@ EVM is a global standard, developed by Europay, MasterCard, and Visa, that defin
 The first source I use was published in 2016, but I am not sure that it is relevant without an explanation. I have not yet found an academic source for this, but my conclusion is that the insecure credit card protocol described in Section ~\ref{fig:currentCC} and been mostly, if not totally discontinued. However there is no clear statement of why this happened, but I would bet that it was due to the exact security concerns mentioned. Still, the source does point out that the "near" in NFC does not guarantee security.\newline
 Starting about this year, EMV (Europay-Visa-MasterCard) chip and pin have caught on big in the states. I think this may be in part a response to the glaring security risks of sticking with magnetic strips. This is an important discussion as well, because without it most folks have no idea where NFC fits into the industry. \newline
 The crucial next step would be to explain that Apple Pay and Android Pay are wireless implementations of the EMV standard. And that other things beyond payments are being developed to take advantage of NFC technology. Then, I think people will be semi-comfortable with background.}~\cite{wired}
+\todo[inline]{Mention EMV here or remove from "Viability ... Ticketing"}
+
 
 \subsection{Security for NFC}
 \label{sec:backgroundSecurity}
@@ -230,6 +232,23 @@ The authors note that TA$\leftrightarrow$CA transactions will not be synchronous
 \subsection{Variant 2}
 
 \subsection{Viability Mobile Phone Ticketing}
+Based on experimental measurements, Tamrakar, Ekberg, and Asokan, calculated transaction speeds for each protocol at various encryption key sizes. The results, displayed in Table~\ref{tab:speedTable}, reveal that several of the speeds are very close to or beyond the 300ms threshold. They also note that 1024 bit key size has been deprecated by EMV since 2009 and that 1152 bit keys are stated as acceptable up to 2011. Interestingly, the limited NFC data transfer speeds are the what was found to be the biggest performance bottleneck. 
+
+\begin{table}[h!]
+  \centering
+  \caption{Estimated protocol speeds~\cite{Ticket2011}}
+  \label{tab:speedTable}
+  \begin{tabular}{c|c|c|c}
+    RSA Key Size & Standard & Variant 1 & Variant 2\\
+    \hline
+    1024 bits & 296 ms & 164 ms & 182 ms\\
+    1152 bits & 314 ms & 172 ms & 190 ms\\
+    2048 bits & 482 ms & 228 ms & 246 ms\\    
+  \end{tabular}
+\end{table}
+
+In terms of security, the Nokia researchers grant that since users need not interact with phone to complete transactions, relay attacks are possible on all protocol variants, especially if the ticketing application is set to always-on to improve usability. Using perishable tokens or the hash chain may mitigate threats, the better user experience and accounting offered by using phones for ticketing may be worth the risk -- especially when the risk is small theft in a well-known, guarded transit station. Furthermore, contactless cards, an alternative NFC ticketing technology, does not meet performance or security needs. With these constraints in mind, the researchers contend that, although imperfect, the variant protocols appear be valid paths forward as mobile-based ticketing continues to mature.
+ 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
