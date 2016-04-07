@@ -195,7 +195,7 @@ Finally, the bank uses the \textit{UUID} to look up official card data. Then the
 \begin{figure}
 \centering
 \psfig{file=figures/secureCC.png,width=3in,natwidth=700,natheight=189}
-\caption{Purposed Credit Card Protocol~\cite{CC2016}}
+\caption{Proposed Credit Card Protocol~\cite{CC2016}}
 \label{fig:secureCC}
 \end{figure}
 
@@ -208,36 +208,27 @@ Finally, the bank uses the \textit{UUID} to look up official card data. Then the
 \section{NFC and Mass Transit Ticketing}
 \label{sec:mobile}
 
-Mass transit systems have widely adopted contactless NFC cards for identity verification and ticketing. Three Nokia researchers, Tamrakar, Ekberg, and Asokan, have punished a paper investigating the use of NFC-enabled mobile phones for this application. In their paper, they first describe the the pieces involved in building a complete identity-verification ticketing architecture. Then, three implementations of mobile ticketing, each balancing security and transaction time in a unique way, are introduced, prototyped, and critiqued.\cite{Ticket2011}
+Mass transit systems have widely adopted contactless NFC cards for identity verification and ticketing. Three Nokia researchers, Tamrakar, Ekberg, and Asokan, have punished a paper investigating the use of NFC-enabled mobile phones for this application. In their paper, they first describe the the pieces involved in building a complete identity-verification ticketing architecture. Then, three implementations of mobile ticketing, each balancing security and transaction time in a unique way, are introduced, prototyped, and critiqued.~\cite{Ticket2011}
 
 \subsection{Ticketing Architecture}
-In order to for NFC on phones to be used for mass transit ticketing, additional infrastructure is required. An overview of the high level components and their iterations is illustrated in~\ref{fig:ticketingArch}.
-
-CA
-hands out identity certificates
-maintains billing information
-clear transactions and maintain blacklist
-
-D
-NFC phone crytopgraphically associated with an account holder by CA
-has TEE
-
-R
-reader at gate
-recieves blacklist updates
-
-TA
-opearting ticket readers and gates
-collects all evidence from D<->R transactions for calculating fares and submitting evidence to the CA
-queries the blacklist and distributes to readers. 
-**TA CA transactions shall not be synchronous to the data transaction between D and R. My be real-time if special blacklist query for user's first time
-
 \begin{figure}
 \centering
 \psfig{file=figures/ticketingArch.png,width=3in,natwidth=700,natheight=189}
-\caption{Purposed Credit Card Protocol~\cite{CC2016}}
+\caption{Proposed Credit Card Protocol~\cite{CC2016}}
 \label{fig:ticketingArch}
 \end{figure}
+
+For NFC phones to be used for mass transit ticketing, additional infrastructure is required. An overview of the high level components and their iterations is illustrated in~\ref{fig:ticketingArch}. The Accounting / Certificate Authority (CA) is a centralized entity responsible for issuing transport IDs, clearing transactions and maintaining billing information, and maintaining a blacklist. The User Device (D) is a smartphone capable of executing cryptographic operations and uses WLAN or a mobile data connection to attain a transport ID from CA. The ticket reader (R) sits at transit gates; R communicates with the D using NFC and the other entities using infrastructure. Finally, the Transport Authority Backend (TA) is an entity capable of operating all of the ticket readers and gates. In addition, the TA collects evidence from D$\leftrightarrow$R transactions for calculating fares, submits such session evidence to the CA, and queries the CA blacklist in order to distribute changes to all ticket readers.
+
+The authors note that TA$\leftrightarrow$CA transactions will not be synchronous to the D$\leftrightarrow$R data transaction. This way, the ticket lines will not be slowed, with the exception of special blacklist query for user's first trip.
+
+\subsection{Standard Protocol}
+
+\subsection{Variant 1}
+
+\subsection{Variant 2}
+
+\subsection{Viability Mobile Phone Ticketing}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -250,14 +241,14 @@ queries the blacklist and distributes to readers.
 \begin{figure}
 \centering
 \psfig{file=figures/states.png,width=3in,natwidth=700,natheight=189}
-\caption{Simplified EnGarde\cite{Gum2013} state digram}
+\caption{EnGarde\cite{Gum2013} state digram}
 \label{fig:states}
 \end{figure}
 
 
 Commercial payment systems such as Apple Pay and Android Pay are bringing NFC to our phones, which could introduce security risks in both payment and non-payment applications of NFC. A programmable, hardware-based firewall may be a viable way to defend against more general threats as new applications and attacks are developed. EnGarde is designed to be an extremely power efficient, semi-permanent attachment for everyday mobile phones. Such a device-independent security method, a metaphorical tin foil hat, could offer flexibly against current and evolving attacks on NFC enabled devices.~\cite{Gum2013}
 
-Our goal is to give an overview of the EnGarde security system prototyped by Gummeson et al. Figure \ref{fig:states}, is used as a roadmap for our summary of EnGarde and its components.
+Our goal is to give an overview of the EnGarde security system prototyped by Gummeson et al. Figure \ref{fig:states} is used as a roadmap for our summary of EnGarde and its components.
 
 \subsection{No Power Mode}
 
