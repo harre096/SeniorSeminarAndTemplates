@@ -208,7 +208,8 @@ Finally, the bank uses the \textit{UUID} to look up official card data. Then the
 \section{NFC and Mass Transit Ticketing}
 \label{sec:mobile}
 
-Mass transit systems have widely adopted contactless NFC cards for identity verification and ticketing. Three Nokia researchers, Tamrakar, Ekberg, and Asokan, have punished a paper investigating the use of NFC-enabled mobile phones for this application. In their paper, they first describe the the pieces involved in building a complete identity-verification ticketing architecture. Then, three implementations of mobile ticketing, each balancing security and transaction time in a unique way, are introduced, prototyped, and critiqued.~\cite{Ticket2011}
+Mass transit systems have widely adopted contactless NFC cards for identity verification and ticketing. Three Nokia researchers, Tamrakar, Ekberg, and Asokan, have punished a paper investigating the use of NFC-enabled mobile phones for this application. In their paper, they seek to achieve security while keeping transaction time below 300ms -- a time budget indicated by Smart Card Alliance for public transport systems.
+They first describe the the pieces involved in building a complete identity-verification ticketing architecture. Then, three implementations of mobile ticketing are introduced, prototyped, and critiqued.~\cite{Ticket2011}
 
 \subsection{Ticketing Architecture}
 \begin{figure}
@@ -220,7 +221,7 @@ Mass transit systems have widely adopted contactless NFC cards for identity veri
 
 For NFC phones to be used for mass transit ticketing, additional infrastructure is required. An overview of the high level components and their iterations is illustrated in~\ref{fig:ticketingArch}. The Accounting / Certificate Authority (CA) is a centralized entity responsible for issuing transport IDs, clearing transactions and maintaining billing information, and maintaining a blacklist. The User Device (D) is a smartphone capable of executing cryptographic operations and uses WLAN or a mobile data connection to attain a transport ID from CA. The ticket reader (R) sits at transit gates; R communicates with the D using NFC and the other entities using infrastructure. Finally, the Transport Authority Backend (TA) is an entity capable of operating all of the ticket readers and gates. In addition, the TA collects evidence from D$\leftrightarrow$R transactions for calculating fares, submits such session evidence to the CA, and queries the CA blacklist in order to distribute changes to all ticket readers.
 
-The authors note that TA$\leftrightarrow$CA transactions will not be synchronous to the D$\leftrightarrow$R data transaction. This way, the ticket lines will not be slowed, with the exception of special blacklist query for user's first trip.
+The authors note that TA$\leftrightarrow$CA transactions will not be synchronous to the D$\leftrightarrow$R data transaction. This way, the ticket lines will not be slowed, with the exception of special blacklist query for user's first transit ride.
 
 \subsection{Standard Protocol}
 
