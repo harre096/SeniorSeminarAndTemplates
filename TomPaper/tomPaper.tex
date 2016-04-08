@@ -211,7 +211,7 @@ They first describe the the pieces involved in building a complete identity-veri
 \begin{figure}
 \centering
 \psfig{file=figures/ticketingArch.png,width=3in,natwidth=700,natheight=189}
-\caption{Proposed Credit Card Protocol~\cite{Ticket2011}}
+\caption{Proposed Ticketing Architecture~\cite{Ticket2011}}
 \label{fig:ticketingArch}
 \end{figure}
 
@@ -227,17 +227,31 @@ Mobile phones are capable of doing cryptographic operations which are executed i
 ~\cite{Ticket2011}  
 \vspace{2mm}\newline
 \textbf{Secure Communications:}
-There are various methods for securing communication over an insecure channel such as NFC. In a simple symmetric key system, both parties have a secret key that is used to encrypt and decrypt messages at each end of a communication channel. This works very well, but distributing the private key to both parties can present a problem. The public key system works differently than this, requiring a both a private key and a complementary public key. Public keys are distributed and can be used by anyone to encrypt a message that can only be decrypted by the matching private key.~\cite{crypto}
+There are various methods for securing communication over an insecure channel such as NFC. In a simple symmetric key system, both parties have a secret key that is used to encrypt and decrypt messages at each end of a communication channel. This works very well, but distributing the private key to both parties can present a problem. The asymmetric key system works differently than this, requiring a both a private key and a complementary public key. Public keys are distributed and can be used by anyone to encrypt a message that can only be decrypted by the matching private key.
+
+In addition to messages being encrypted, they can also be authenticated and protected againt modification using a \textit{signature} or \textit{message authentication code} (MAC). Both of these tools are similar as they use keys to generate a distinct, verifiable message based on the contents of the message body. MACs create this verifible message using a symmetric key, while signatures use an asymmetric key.\cite{crypto}
 
 \subsection{Standard Protocol}
-In the standard protocol, D uses WLAN or mobile data to attain a transport ID from CA that is valid for several months. The transport ID takes the form of a \textit{certificate}. A certificate is a digital document containing attributes associated to the holder, in this case D, from the trusted issuer, the CA. \textcolor{blue}{[wiki/~\cite{crypto}?]} The standards-compliant X.509 certificate standard is typically used, but its size is too large for this application. Instead, the Nokia researchers have chosen to use an optimized certificate containing an expiration date, the identity of D, and a public key to be used by R in decoding messages from D. The drawback of using the certificate, however, lies in the large keys required by \textit{RSA}, the chosen public-key cryptography system, which will take substantial time to transmit over NFC.
+In the standard protocol, D first uses WLAN or mobile data to attain an identity \textit{certificate} from CA that is valid for several months. A certificate is a digital document containing attributes associated to the holder, in this case D, from the trusted party, the CA~\cite{crypto}. The standards-compliant X.509 certificate standard is typically used, but its size is too large for this application. Instead, the Nokia researchers have chosen to use an optimized certificate containing an expiration date, a transport identity for D, and a public key to be used by R in decoding messages from D. 
  
-Several steps occur in a standard D$\leftrightarrow$R transaction. First, R initiates communication, sending its identity and a random challenge to D. D then responds by sending back its transport ID certificate. Next, D uses its private key to generate a signature using the challenge and identities of both D and R. Finally, R verifies all of the information, checks D against its blacklist, opens the transit gate, and forwards all transaction to the TA. D also keeps a evidence of the transaction which can be used to prove ticket purchases.
+Once D has requested and received a certificate from the CA, several steps occur to complete a D$\leftrightarrow$R transaction. First, R initiates communication, sending its identity and a random challenge to D. D then responds by sending back its certificate. Next, D uses its private key to generate a signature using the challenge along with the IDs of both D and R; D then sends the signature as well. Finally, R validates the certificate using a public key from the CA, verifies the signature, checks D against its blacklist, opens the transit gate, and forwards all transaction to the TA. D also keeps evidence of the transaction which can be used to prove ticket purchases.
+
+The drawback of using a certificate, however, lies in the large keys required by the \textit{RSA} algorithm. RSA is the chosen asymmetric cryptography system and lengthy RSA keys take substantial time to transmit over NFC.
 
 \subsection{Variant 1}
-In variant 1, the certificate is replace by a significantly-smaller, quickly-expiring token.
+In Variant 1, the certificate is replaced by a token. The proposed tokens will only be valid for a few hours and will be significantly smaller than the certificate because they do not contain a public key. The token will contain the transport identity for D and two time stamps, forming a window of validity. As a side affect of not passing the public key to the R, Variant 1 cannot use signature. Instead, a MAC, generated using a key shared between D and CA, will be used. Also, since only D and CA know the private key used to generate and check the MAC, R will simply forwards this data to the CA, via the TR for validation. As a result of these changes, the transaction is substantially faster, but validation during a D$\leftrightarrow$R transaction is limited to R verifying the token and querying the blacklist.
 
 \subsection{Variant 2}
+Variant 2 is built upon Variant 1, but uses a reversed hash chain to reduce the frequency of fetching tokens by without substantially affecting performance. Initially, a one-way hash function is used to generate a sequence of values. Then the and only the last item is revealed. Then after every time period, the First, a one-way hash function is used to generate a sequence; revealing the items of the sequence in unveiled first first.\footnote{
+
+} 
+This  that builds upon itself using the previous result as the seed for the next answer. As a result, givenThe simple token is replaced with an only slightly longer certificate, still assigned to D from CA.
+
+
+
+ The certificate contains D's identity, a hash chain value, a hash chain index, and the same two time stamps, forming a window of validity. reduce replay risk
+ token valitiy can be reduced to 5 min
+ cache of recently used  hash values
 
 \subsection{Viability Mobile Phone Ticketing}
 Based on experimental measurements, Tamrakar, Ekberg, and Asokan, calculated transaction speeds for each protocol at various encryption key sizes. The results, displayed in Table~\ref{tab:speedTable}, reveal that several of the speeds are very close to or beyond the 300ms threshold. They also note that 1024 bit key size has been deprecated by EMV since 2009 and that 1152 bit keys are stated as acceptable up to 2011. Interestingly, the limited NFC data transfer speeds are the what was found to be the biggest performance bottleneck. 

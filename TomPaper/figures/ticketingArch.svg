@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="ticketingArch.svg"
-   inkscape:export-filename="/home/tom/TomPaper/figures/ticketingArch.png"
+   inkscape:export-filename="/home/harre096/appdev/ssem/TomPaper/figures/ticketingArch.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -296,17 +296,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="369.96319"
-     inkscape:cy="542.3472"
+     inkscape:zoom="1.4"
+     inkscape:cx="392.18191"
+     inkscape:cy="680.95238"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="960"
-     inkscape:window-height="1028"
-     inkscape:window-x="10"
-     inkscape:window-y="24"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1680"
+     inkscape:window-height="1013"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -394,13 +394,15 @@
          style="font-size:22.5px;text-align:center;text-anchor:middle"
          id="tspan4370">(TA)</tspan></text>
     <rect
-       style="fill:#627aec;fill-opacity:0.5408805;fill-rule:evenodd"
+       style="fill:#ecd862;fill-opacity:0.5408805;fill-rule:evenodd"
        id="rect4136-9-0"
        width="245.40883"
        height="202.20384"
        x="25.600985"
        y="389.26028"
-       ry="30.3046" />
+       ry="30.3046"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -443,13 +445,6 @@
          y="490.17026"
          style="font-size:22.5px;text-align:center;text-anchor:middle"
          id="tspan4377">(R)</tspan></text>
-    <ellipse
-       style="fill:#627aec;fill-opacity:0.5408805;fill-rule:evenodd"
-       id="path4379"
-       cx="375.90115"
-       cy="497.73621"
-       rx="60.896046"
-       ry="33.563572" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -463,7 +458,7 @@
          style="font-size:22.5px;text-align:center;text-anchor:middle"
          id="tspan4359-7">NFC</tspan></text>
     <g
-       transform="matrix(1.5165823,0,0,0.99436048,-182.27742,2.6321547)"
+       transform="matrix(1.5165823,0,0,0.99436048,-192.27742,2.6321547)"
        id="g4513-4-2">
       <path
          transform="matrix(1.2351203,1.2530621,-1.28321,1.0734237,1104.6842,-457.80093)"
@@ -578,12 +573,7 @@
          x="86.196617"
          y="354.18982"
          style="font-size:17.5px;text-align:center;text-anchor:middle"
-         id="tspan3747">Transport</tspan><tspan
-         sodipodi:role="line"
-         x="86.196617"
-         y="376.06482"
-         style="font-size:17.5px;text-align:center;text-anchor:middle"
-         id="tspan3728">ID</tspan></text>
+         id="tspan3728">Certificate</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -600,17 +590,7 @@
          x="203.89062"
          y="355.18085"
          style="font-size:17.5px;text-align:center;text-anchor:middle"
-         id="tspan4844">Transport</tspan><tspan
-         sodipodi:role="line"
-         x="203.89062"
-         y="377.05585"
-         style="font-size:17.5px;text-align:center;text-anchor:middle"
-         id="tspan4846">ID</tspan><tspan
-         sodipodi:role="line"
-         x="203.89062"
-         y="398.93085"
-         style="font-size:17.5px;text-align:center;text-anchor:middle"
-         id="tspan3730" /></text>
+         id="tspan3730">Certificate</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4)"
        d="m 480.22474,264.82311 -207.94477,0"
@@ -642,12 +622,12 @@
          id="tspan6815-6-5-1"
          x="376.0719"
          y="110.82108"
-         style="font-size:17.5px;text-align:center;text-anchor:middle">Request Transport </tspan><tspan
+         style="font-size:17.5px;text-align:center;text-anchor:middle">Request Device </tspan><tspan
          sodipodi:role="line"
          x="373.28625"
          y="132.69608"
          style="font-size:17.5px;text-align:center;text-anchor:middle"
-         id="tspan4902">ID Verification</tspan></text>
+         id="tspan4902">Verification</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -758,7 +738,7 @@
        id="path4606-3-7"
        inkscape:connector-curvature="0" />
     <g
-       transform="matrix(-1.5165823,0,0,-0.99436048,934.648,992.56581)"
+       transform="matrix(-1.5165823,0,0,-0.99436048,946.648,992.56581)"
        id="g4513-4-2-0">
       <path
          transform="matrix(1.2351203,1.2530621,-1.28321,1.0734237,1104.6842,-457.80093)"
