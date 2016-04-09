@@ -329,20 +329,19 @@ There is, however, a drawback to the pulse jamming method; a sufficiently high-p
 \noindent\textbf{Jamming:} Both of EnGarde's jamming primitives are surprisingly effective. In fact, when Gummeson et al evaluated their device, they found that reflective jamming worked flawlessly against four tags that they tested against. Additionally, they tested the pulse jamming method with general purpose NFC reader and found that EnGarde was able to block 100\% of the responses.
 \vspace{2mm}\newline
 \noindent\textbf{Decoding:} 
-When trying to read tags, one of which contained a blacklisted URL, they found that EnGarde blocked the malicious URL and allowed the benign URL every time.
+Gummeson et al tested EnGarde's decoder using an explicitly defined blacklist set to block all urls starting with $http://www.malware$. When trying to read tags, one of which contained a blacklisted URL, they found that EnGarde blocked the malicious URL and allowed the benign URL every time. 
 \vspace{2mm}\newline
-It appears that EnGarde was extraordinarily successful given the official results.
-
+Based on these results, it appears that the EnGarde hardware can be very effective at blocking NFC communications it deems malicious. We would like to note, however, that EnGarde's ability to block malicious messages is only as good as its ability to detect them; a blacklist containing only $http://www.malware$ clearly won't block all NFC communications of malicious intent. EnGarde does, however, offer a  programmable, platform independent hardware defense that could certainly be an effective building block for securing NFC is it matures in the future. 
 \section{Conclusions}
 \label{sec:conclusions}
 
-Now that we have looked at
+NFC is a young technology and is rapidly growing in popularity due to the deployment of mobile payment system. While the quick setup and ability to communicate with passive tags is attractive, we think that NFC needs to overcome a few hurdles before it becomes ubiquitous. Namely, security and data transfer speed are significant issues based on the research we have covered in this paper. In the first paper, Jensen, Gouda, and Qiu were able to provide a clever solution to the present security holes by introducing a fortified security scheme for contactless credit cards. While their solution is certainly novel, we discovered that the limited range of NFC is not enough to guarantee security. In the second paper, we reviewed several implementations of mass transit ticketing using NFC on mobile phones. The Nokia researchers were able to provide to provide acceptable solutions given the current state of technology, but have clearly highlighted that the slow data transfer speed of NFC is an obstacle to work around. Finally, Gummeson et all introduced a clever, device independent hardware firewall for NFC on an everyday mobile device. The design of the EnGarde device appears to be incredibly successful at jamming signals, but we note that the protection may only be as good as the blacklist it uses. Overall, it appears that NFC is a user friendly, flexible communication interface that may become more popular. However, to gain traction, more clever solutions or faster data transfer speeds will be required in order to add sufficient security in the future.
 
 \section*{Acknowledgments}
 \label{sec:acknowledgments}
 
 
-Thank you to Nic, Elena, KK, and Kevin for your help.
+At this point, I would like to extend thanks to everyone who helped me in this project. In particular, my advisor Nic McPhee, along with professors Elena Machkasova and KK Lamberty were insightful in their guidance and feedback. Finally, I would like to extend a special thank you to Kevin Byod for his insightful knowledge  concerning physics and data transfer protocols.
 
 % The following two commands are all you need in the
 % initial runs of your .tex file to
