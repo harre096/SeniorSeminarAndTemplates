@@ -34,21 +34,22 @@ Thomas Harren\\
 \begin{abstract}
 Near Field Communication is a technology that is rapidly growing in popularity and is becoming even more accessible due to the advent of mobile payment systems. \textit{Near Field Communication} (NFC) is built upon High Frequency Radio Frequency Identification technology, more commonly known as HF RFID. However, NFC is a richer communication method: it supports both passive and active components, but at a shorter range. Uses of NFC technologies are being rapidly developed to be used in payment systems and for other applications. 
 
-NFC is a flexible communication technology, but it is not inherently secure. The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to various attacks. As a result, measures to ensure confidentiality, integrity, or authentication need to implemented as an extension of NFC. Moreover, if the data transmitted from a peer is malicious, a hardware-based firewall may be a good way to defend your NFC capable device. One proposed technology is a device-independent security method, a metaphorical tin foil hat, that could offer flexibly against current and evolving attacks on NFC enabled devices.
+NFC is a flexible communication technology, but it is not inherently secure. The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to various attacks. As a result, measures to ensure confidentiality, integrity, and authentication need to be implemented as an extension of NFC. Moreover, if the data transmitted from a peer is malicious, a hardware-based firewall may be a good way to defend your NFC capable device. One proposed technology is a device-independent security method, a metaphorical tin foil hat, that could offer flexibly against current and evolving attacks on NFC enabled devices.
 \end{abstract}
 
-\keywords{Near Field Communication, Payments, Security}
+\keywords{Near Field Communication (NFC), Payments, Ticketing, Mass Transit, Security, Privacy, Jamming}
 
 \section{Introduction}
 \label{sec:introduction}
 Near Field Communication is a technology that is rapidly growing in popularity and is becoming even more accessible due to the advent of mobile payment systems. \textit{Near Field Communication} (NFC) is built upon High Frequency Radio Frequency Identification technology, more commonly known as HF RFID. NFC is restricted to a shorter range than RFID and offers interactive communication method between devices that have both passive and active components. An NFC connection can be set up quickly and connectivity does not require line of sight. Uses of NFC technologies are being rapidly developed to be used in payment systems and in other applications~\cite{Gum2013}. 
 
-NFC is a flexible communication technology, but it is not inherently secure. The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to various attacks. For sensitive data, measures to ensure confidentiality, integrity, or authentication need to implemented as an extension of NFC~\cite{CC2016}. In addition, there is no protection against other parties that may have malicious intent. One proposed technology offers a flexible hardware firewall may be an effective way to block data transfers with malicious peers~\cite{Gum2013}.
+NFC is a flexible communication technology, but it is not inherently secure. The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to various attacks. For sensitive data, measures to ensure confidentiality, integrity, and authentication need to be implemented as an extension of NFC~\cite{CC2016}. In addition, there is no protection against other parties that may have malicious intent. One proposed technology offers a flexible hardware firewall that may be an effective way to block data transfers with malicious peers~\cite{Gum2013}.
 
 In this paper, we focus on security and applications of NFC regarding payments and ticketing. First, we describe the foundations of Near Field Communication in Section~\ref{sec:background}. After the background section, we discuss security in three different NFC contexts: contactless credit cards, mobile ticketing applications, and physical NFC security. 
-In the first souce, we highlight a recent academic source that describes issues and proposes a solution for NFC security in the context of contactless credit cards in Section~\ref{sec:creditCard}. 
+We highlight several viable attacks on 
+contactless credit cards and investigate a proposed solution in Section~\ref{sec:creditCard}.
 In Section~\ref{sec:mobile}, we discuss a prospective application for the richer NFC communication offered when using mobile phones. In particular, this section focuses on  using mobile phones for mass transit ticketing. Three implementations of mobile ticketing, each balancing security and transaction time in a unique way, are introduced, prototyped, and critiqued.
-This leads to the final source, a discussion about the EnGarde shield in Section~\ref{sec:enGarde}. Commercial payment systems such as Apple Pay and Android Pay are bringing NFC to mobile phones, which could introduce security risks in both payment and non-payment applications of NFC. The proposed device independent, hardware-based firewall may be a viable way to defend against more general threats.
+This leads to the final source, a discussion about the EnGarde shield in Section~\ref{sec:enGarde}. Commercial payment systems such as Apple Pay and Android Pay are bringing NFC to mobile phones, which could introduce security risks in both payment and non-payment applications of NFC. The proposed device utilizes an independent, hardware-based firewall which may be a viable way to defend against more general threats.
 
 
 \section{Background}
@@ -94,7 +95,7 @@ When two compatible devices are capable of switching between reader and tag emul
 
 \subsection{Security for NFC}
 \label{sec:backgroundSecurity}
-NFC is a flexible communication technology, but it is not inherently secure. The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to several attacks. As a result, measures to ensure confidentiality, integrity, or authentication need to implemented as an extension of NFC. Maintaining security of NFC is the main focus of this paper.~\cite{CC2016}
+NFC is a flexible communication technology, but it is not inherently secure. The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to several attacks. As a result, measures to ensure confidentiality, integrity, and authentication need to implemented as an extension of NFC. Maintaining security of NFC is the main focus of this paper.~\cite{CC2016}
 
 
 
@@ -106,7 +107,7 @@ In this section, we look at the usage of passively powered NFC tags installed in
 
 \subsection{Current Credit Card Protocol}
 \label{sec:currentCC}
-As background, we will describe the current credit card protocol used for NFC transactions. The current protocol does offer some level of security by merit of the iCVV. A dynamic card verification value or \textit{iCVV} is single use value that a contactless credit card generates each transaction~\cite{wiki:iCVV}. The iCVV is returned from a pesudo-random sequence using a seed known only to that specific credit card and the issuing bank. At the time of authorization, the bank checks that the iCVV received is one the expected values in that card's iCVV sequence. The four phases of the credit card protocol used for NFC transactions, are illustrated in Figure~\ref{fig:currentCC}, and will now be described.
+As background, we will describe the current credit card protocol used for NFC transactions. The current protocol does offer some level of security by merit of the iCVV. A dynamic card verification value or \textit{iCVV} is a single use value that a contactless credit card generates each transaction~\cite{wiki:iCVV}. The iCVV is returned from a pesudo-random sequence using a seed known only to that specific credit card and the issuing bank. At the time of authorization, the bank checks that the iCVV received is one of the expected values in that card's iCVV sequence. The four phases of the credit card protocol used for NFC transactions, are illustrated in Figure~\ref{fig:currentCC}, and will now be described.
 
 \begin{figure}
 \centering
@@ -116,7 +117,7 @@ As background, we will describe the current credit card protocol used for NFC tr
 \label{fig:currentCC}
 \end{figure}
 
-In the first phase, called \textit{solicitation}, the point-of-sale and the credit card exchange several messages in a static manner. In this phase, each both parties share general information about themselves. For example, a card may identify itself as \texttt{VISA CREDIT}.
+In the first phase, called \textit{solicitation}, the point-of-sale and the credit card exchange several messages in a static manner. In this phase, both parties share general information about themselves. For example, a card may identify itself as \texttt{VISA CREDIT}.
 
 In the second phase, \textit{card information} is sent from the card to the point-of-sale. The card information is composed of the credit card number, the credit card's expiration date, the iCVV, and the name of the bank that issued the card.
 
@@ -127,7 +128,7 @@ The final phase is called \textit{authorization} and only occurs if the bank dee
 
 \subsection{Credit Card Attacks}
 \label{sec:attacks}
-The following attacks on NFC transactions may vary slightly in agency, but each method ultimately exposes sensitive card information. The first three attacks can be accomplished with merely a NFC compatible mobile phone and some additional, inexpensive hardware. The final attack, compromised point-of-sale, points out a more general weakness about the implementation of the current protocol.
+The following attacks on NFC transactions may vary slightly in approach, but each method ultimately exposes sensitive card information. The first three attacks can be accomplished with merely a NFC compatible mobile phone and some additional, inexpensive hardware. The final attack, compromised point-of-sale, points out a more general weakness about the implementation of the current protocol.
 \vspace{2mm}\newline
 \noindent\textbf{Eavesdropping:}
 In this attack, a malicious party is able to capture sensitive data by listening in on the first two phases of a transaction. Thus, the card number, expiration data, iCVV, and bank name are gleaned by the malicious party. The iCVV cannot be used again, but the other information may already be enough to make a fraudulent purchase.
@@ -135,36 +136,36 @@ In this attack, a malicious party is able to capture sensitive data by listening
 \begin{figure}
 \centering
 \psfig{file=figures/eavesdroppingAntenna.png,width=3in,natwidth=700,natheight=189}
-\caption{Eavesdropping Antenna~\cite{CC2016} \newline(credit card for scale)}
+\caption{Eavesdropping antennas can be quite small and easy to conceal.~\cite{CC2016} (card for scale)}
 \label{fig:antenna}
 \end{figure}
 
-Jensen, Gouda, and Qiu demonstrated the feasibility of this attack by modifying an NFC tag and connecting it to an inexpensive radio. The very small, easy concealable NFC antenna, shown in Figure~\ref{fig:antenna}, that could be mounted or held within the range of a contactless NFC credit card terminal.
+Jensen, Gouda, and Qiu demonstrated the feasibility of this attack by modifying an NFC tag and connecting it to an inexpensive radio. The very small, easy concealable NFC antenna is shown in Figure~\ref{fig:antenna}. The antenna could be mounted or held within the range of a contactless NFC credit card terminal.
 \vspace{2mm}\newline
 \noindent\textbf{Skimming:}
 In this attack, illustrated in Figure~\ref{fig:skim}, a skimmer gains a victims credit card information, including a single usable iCVV, by masquerading as a point-of-sale. After the skimmer has captured this data, it can replay the credit card information to a genuine point-of-sale to perform an illegitimate purchase on behalf of the victim.
 
 Surprisingly, this attack can be carried out by simply installing an Android application called \textit{NFCProxy}.\footnote{\textit{NFCProxy} was presented at DefCon 20 and can be downloaded at: https://sourceforge.net/projects/nfcproxy/~\cite{CC2016}}
-Using \textit{NFCProxy}, any NFC enabled Android device can skim information from a contactless credit card and make a single purchase. To make subsequent purchases, the attack must be repeated to obtain a new iCVVs.
+Using \textit{NFCProxy}, any NFC enabled Android device can skim information from a contactless credit card and make a  purchase. To make subsequent purchases, the attack can be repeated to obtain new iCVVs.
 \begin{figure}
 \centering
 \psfig{file=figures/skim.png,width=3in,natwidth=700,natheight=189}
-\caption{Skimming~\cite{CC2016}}
+\caption{Basic steps for executing a skimming attack using the current credit card protocol.~\cite{CC2016}}
 \label{fig:skim}
 \end{figure} 
 \vspace{2mm}\newline
 \noindent\textbf{Relay Attacks:}
-The relay attack is similar to the skimming attack, but it does not rely on a single device to skim and replay card data. Instead, two entities work in concert by sharing information over an alternative communication channel, such as wireless LAN.
+In this attack, two devices work in concert to rapidly carry out the skimming attack. Using an alternative communication channel, such as wireless LAN, the data can be skimmed in one location and spent in another.
 \vspace{2mm}\newline
 \noindent\textbf{Compromised Point-of-Sale:}
 This attack points out that since point-of-sale devices learn enough information to allow multiple charges, the point-of-sale is a natural target. If a point-of-sale is compromised, transaction becomes accessible to malicious parties. Jensen, Gouda, and Qiu list several merchants that have recently had their point-of-sale systems compromised including Target, Home Depot, and SuperValu stores.
 
 \subsection{Proposed Secure Credit Card Protocol}
-To address these security concerns, Jensen, Gouda, and Qiu have proposed a secure protocol shares the same four phases as the current credit card protocol (Figure~\ref{fig:currentCC}) but with several variations that will be described and illustrated using the Figure~\ref{fig:secureCC}. 
+To address these security concerns, Jensen, Gouda, and Qiu have proposed a secure protocol which shares the same four phases as the current credit card protocol (Figure~\ref{fig:currentCC}) but with several variations that will be described and illustrated using the Figure~\ref{fig:secureCC}. 
 
 The solicitation phase now includes a random challenge (\textbf{ch}) that will be used by the credit card when building its response. After receiving some basic information and the challenge, the credit card responds by sending the card information in three distinct pieces:
 \begin{itemize}
-  \item \textbf{A}: \textbf{\textit{UUID}}, a Universally Unique Identifier that to identify the credit card. The UUID is static.
+  \item \textbf{A}: \textbf{\textit{UUID}}, a Universally Unique Identifier that is used to identify the credit card. The UUID is static.
   \item \textbf{B}: \textit{\textbf{H(info, ch, iCVV})} is used to authenticate the card's identity. Notice that the sensitive info, including the card number and expiration date, will not be transmitted in plain text. The details of the hash-like function H are described below.
   \item \textbf{C}: \textbf{\textit{bank name}} is used to route the charge request.
   \end{itemize}
@@ -188,7 +189,7 @@ function H(info, ch, iCVV):
   return (x XOR iCVV)
 \end{lstlisting}
 
-In summary, G composes a binary string $x$ by setting values to 1 at indexes where that value in the challenge matches the value of $khi$. Note that the value of $khi$ is a constant and need to be computed only when the credit card is manufactured. The value $x$ is then combined with the credit card's freshly generated iCVV using XOR. This creates a value that is indistinguishable from random and cannot be used in replay attacks with other challenge values. Using this method, a low powered credit card can encode and transmit payment information while being protected from all of the aforementioned attacks.
+In summary, G composes a binary string $x$ by setting values to 1 at indexes where that value in the challenge matches the value of $khi$. Note that the value of $khi$ is a constant and need to be computed only when the credit card is manufactured. The value $x$ is then combined with the credit card's freshly generated iCVV using XOR. This creates a value that will appear random when intercepted. Also, the value returned cannot be easily used in a replay attack as it was built using a specific challenge value from the instigating reader. Using this method, a low powered credit card can encode and transmit payment information while being protected from all of the aforementioned attacks.
 
 \begin{figure}
 \centering
@@ -201,7 +202,7 @@ In summary, G composes a binary string $x$ by setting values to 1 at indexes whe
 \section{NFC and Mass Transit Ticketing}
 \label{sec:mobile}
 
-Mass transit systems have widely adopted contactless NFC cards for identity verification and ticketing. Three Nokia researchers, Tamrakar, Ekberg, and Asokan, have punished a paper investigating the use of NFC-enabled mobile phones for this application. In their paper, they seek to achieve security while keeping transaction time below 300ms -- a time budget stated in a white paper by Smart Card Alliance for public transport systems.
+Mass transit systems have widely adopted contactless NFC cards for identity verification and ticketing. Three Nokia researchers, Tamrakar, Ekberg, and Asokan, have published a paper investigating the use of NFC-enabled mobile phones for this application. In their paper, they seek to achieve security while keeping transaction time below 300ms -- a time budget stated in a white paper by Smart Card Alliance for public transport systems.
 They first describe the the pieces involved in building a complete identity-verification ticketing architecture. Then, three implementations of mobile ticketing are introduced, prototyped, and critiqued.~\cite{Ticket2011}
 
 \subsection{Ticketing Architecture}
@@ -212,7 +213,7 @@ They first describe the the pieces involved in building a complete identity-veri
 \label{fig:ticketingArch}
 \end{figure}
 
-For NFC phones to be used for mass transit ticketing, additional infrastructure is required. An overview of the high level components and their iterations is illustrated in Figure~\ref{fig:ticketingArch}. The Accounting / Certificate Authority (CA) is a centralized entity responsible for issuing transport IDs, clearing transactions and maintaining billing information, and maintaining a blacklist. The User Device (D) is a smartphone capable of executing cryptographic operations. D uses WLAN or a mobile data connection to attain a transport ID from CA. The ticket reader (R) sits at transit gates. R communicates with the D using NFC and the other entities using infrastructure. Finally, the Transport Authority Backend (TA) is an entity capable of operating all of the ticket readers and gates. In addition, the TA collects evidence from D$\leftrightarrow$R transactions for calculating fares, submits such session evidence to the CA, and queries the CA blacklist in order to distribute changes to all ticket readers.
+For NFC phones to be used for mass transit ticketing, additional infrastructure is required. An overview of the high level components and their iterations is illustrated in Figure~\ref{fig:ticketingArch}. The Accounting / Certificate Authority (CA) is a centralized entity responsible for issuing transport IDs, clearing transactions, maintaining billing information, and maintaining a blacklist. The User Device (D) is a smartphone capable of executing cryptographic operations. D uses WLAN or a mobile data connection to attain a transport ID from CA. The ticket reader (R) sits at transit gates. R communicates with the D using NFC and the other entities using infrastructure. Finally, the Transport Authority Backend (TA) is an entity capable of operating all of the ticket readers and gates. In addition, the TA collects evidence from D$\leftrightarrow$R transactions for calculating fares, submits such session evidence to the CA, and queries the CA blacklist in order to distribute changes to all ticket readers.
 
 The authors note that TA$\leftrightarrow$CA transactions will not be synchronous to the D$\leftrightarrow$R data transaction. This way, the ticket lines will not be slowed, with the exception of special blacklist query for user's first transit ride.
 
@@ -239,7 +240,7 @@ Once D has requested and received a certificate from the CA, several steps occur
 The drawback of using a certificate, however, lies in the large keys required by the \textit{RSA} algorithm. RSA is the chosen asymmetric cryptography system and lengthy RSA keys take substantial time to transmit over NFC.
 
 \subsection{Variant 1}
-In Variant 1, the certificate is replaced by a token. The proposed tokens will only be valid for a few hours and will be significantly smaller than the certificate because they do not contain a public key. The token will contain the transport identity for D and two time stamps, forming a window of validity. As a side affect of not passing the public key to the R, Variant 1 cannot use signature. Instead, a MAC, generated using a key shared between D and CA, will be used. Also, since only D and CA know the private key used to generate and check the MAC, R will simply forwards this data to the CA, via the TR for validation. As a result of these changes, the transaction is substantially faster, but validation during a D$\leftrightarrow$R transaction is limited to R verifying the token and querying the blacklist.
+In Variant 1, the certificate is replaced by a token. The proposed tokens will only be valid for a few hours and will be significantly smaller than the certificate because they do not contain a public key. The token will contain the transport identity for D and two time stamps, forming a window of validity. As a side affect of not passing the public key to the R, Variant 1 cannot use signature. Instead, a MAC, generated using a key shared between D and CA, will be used. Also, since only D and CA know the private key used to generate and check the MAC, R will simply forwards this data to the CA, via the TA for validation. As a result of these changes, the transaction is substantially faster, but validation during a D$\leftrightarrow$R transaction is limited to R verifying the token and querying the blacklist.
 
 \subsection{Variant 2}
 Variant 2 is built upon Variant 1, but uses a reversed hash chain\footnote{
@@ -248,10 +249,10 @@ A hash chain depends on some hash function that can easily generate term $t+1$ i
 The D$\leftrightarrow$R transaction flows much like the previous protocols using a certificate and a MAC, but the hash chain adds extra security. For the hash chain to work, D sends R a term $t$ and a value $n$. R can then use $t$ as a hash seed and use the hash function $n$ times. If $t$ and $n$ are correct, the output will match $t_{f}$, which was received in the certificate. 
 After a time period (eg 5 minutes), the term $t$ is considered common knowledge and R will only accept a new, unused term. At this point, D will use an earlier term, $t-1$. 
 
-Revealing terms of a hash chain in reverse order is useful because it gives D a series of keys that R can validate, but other parties will not be able to predict. Caveats of this system include the need for D and R to have synchronized clocks and the need to track used hash values in real time. The authors suggest that each time a reader R accepts a valid hash term, that term could sent to the TA and then distributed to all readers to prevent the reuse of hash terms. 
+Revealing terms of a hash chain in reverse order is useful because it gives D a series of keys that R can validate, but other parties will not be able to predict. Caveats of this system include the need for D and R to have synchronized clocks and the need to track used hash values in real time. The authors suggest that each time a reader R accepts a valid hash term, that term could be sent to the TA and then distributed to all readers to prevent the reuse of hash terms. 
 
 \subsection{Viability Mobile Phone Ticketing}
-Based on experimental measurements, Tamrakar, Ekberg, and Asokan, calculated transaction speeds for each protocol at various encryption key sizes. The results, displayed in Table~\ref{tab:speedTable}, reveal that several of the speeds are very close to or beyond the 300ms threshold. They also note that 1024 bit key size has been deprecated by EMV since 2009 and that 1152 bit keys are stated as acceptable up to 2011. Interestingly, the limited NFC data transfer speeds are the what was found to be the biggest performance bottleneck. 
+Based on experimental measurements, Tamrakar, Ekberg, and Asokan, calculated transaction speeds for each protocol at various encryption key sizes. The results, displayed in Table~\ref{tab:speedTable}, reveal that several of the speeds are very close to or beyond the 300ms threshold. They also note that 1024 bit key size has been deprecated by EMV since 2009 and that 1152 bit keys are stated as acceptable up to 2011. Interestingly, the limited NFC data transfer speeds were found to be the biggest performance bottleneck. 
 
 \begin{table}[h!]
   \centering
@@ -311,7 +312,7 @@ In this state, we discuss EnGarde's ability to use discretion to block or allow 
 To handle malicious communication, EnGarde scans each message and uses a set of blocking rules to determine if that message should be allowed. The EnGarde is versatile in that current and future undesirable transmissions can be addressed by updating the blocking rules and blacklist.
 
 \subsection{Jam Mode}
-When in this mode, EnGarde's goal is to prevent malicious incoming and outgoing communication over NFC. To do this, EnGarde depends on two jamming primitives:
+When in this mode, EnGarde's goal is to prevent malicious incoming and outgoing communication over NFC. To do this, EnGarde depends on two jamming mechanisms:
 \vspace{2mm}\newline
 \noindent\textbf{Reflective Jamming:} This defense mechanism is effective against attacks from low-powered tags containing items such as malicious URLs. It works by simply generating a weak signal on the same frequency that the tag is broadcasting to. Since EnGarde is mounted on the back of the owner's phone, EnGarde's signal will be stronger and will effectively block the malicious tag's messages. In additional, the electricity being used to power the tag will also be used to power EnGarde's active defense.
 \vspace{2mm}\newline
@@ -320,16 +321,16 @@ When in this mode, EnGarde's goal is to prevent malicious incoming and outgoing 
 There is, however, a drawback to the pulse jamming method; a sufficiently high-powered reader could generate a strong enough signal to nullify EnGarde's attempts to corrupt the incoming data. Yet, Gummeson et al counter that an active attack from a high powered reader could be mitigated by using the \textit{reflective jamming} method during the offending reader's discovery protocol. If a connection with a high-powered reader is never established, then EnGarde would not have to use the pulse jamming mechanism against a high-powered reader.
 
 \subsection{Experimental Evaluation of EnGarde}
-\noindent\textbf{Jamming:} Both of EnGarde's jamming primitives are surprisingly effective. In fact, when Gummeson et al evaluated their device, they found that reflective jamming worked flawlessly against four tags that they tested against. Additionally, they tested the pulse jamming method with general purpose NFC reader and found that EnGarde was able to block 100\% of the responses.
+\noindent\textbf{Jamming:} Both of EnGarde's jamming mechanisms are surprisingly effective. In fact, when Gummeson et al evaluated their device, they found that reflective jamming worked flawlessly against four tags that they tested against. Additionally, they tested the pulse jamming method with general purpose NFC reader and found that EnGarde was able to block 100\% of the responses.
 \vspace{2mm}\newline
 \noindent\textbf{Decoding:} 
 Gummeson et al tested EnGarde's decoder using an explicitly defined blacklist set to block all URLs starting with \textit{http://www.malware}. When trying to read tags, one of which contained a blacklisted URL, they found that EnGarde blocked the malicious URL and allowed the benign URL flawlessly. 
 \vspace{2mm}\newline
-Based on these results, it appears that the EnGarde hardware can be very effective at blocking NFC communications it deems malicious. We would like to note, however, that EnGarde's ability to block malicious messages is only as good as its ability to detect them; a blacklist containing only \textit{http://www.malware} clearly won't block all NFC communications of malicious intent. EnGarde does, however, offer a  programmable, platform independent hardware defense that could certainly be an effective building block for securing NFC is it matures in the future. 
+Based on these results, it appears that the EnGarde hardware can be very effective at blocking NFC communications it deems malicious. We would like to note, however, that EnGarde's ability to block malicious messages is only as good as its ability to detect them; a blacklist containing only \textit{http://www.malware} clearly won't block all NFC communications of malicious intent. EnGarde does, however, offer a  programmable, platform independent hardware defense that could certainly be an effective building block for securing NFC as it matures in the future. 
 \section{Conclusion}
 \label{sec:conclusions}
 
-NFC is a young technology and is rapidly growing in popularity due to the deployment of mobile payment system. While the quick setup and ability to communicate with passive tags is attractive, we think that NFC needs to overcome a few hurdles before it becomes ubiquitous. Namely, based on the research we have covered in this paper, security and data transfer speed are significant issues facing NFC. In the first paper, Jensen, Gouda, and Qiu were able to provide a clever solution to the present security holes by introducing a fortified security scheme for contactless credit cards. While their solution is certainly novel, we discovered that the limited range of NFC is not enough to guarantee security. In the second paper, we reviewed several implementations of mass transit ticketing using NFC on mobile phones. The Nokia researchers were able to provide to provide acceptable solutions given the current state of technology, but have clearly highlighted that the slow data transfer speed of NFC is an obstacle to work around. Finally, Gummeson et all introduced a clever, device independent hardware firewall for NFC on an everyday mobile device. The design of the EnGarde device appears to be incredibly successful at jamming signals, but we note that the protection may only be as good as the blacklist it uses. Overall, it appears that NFC is a user friendly, flexible communication interface that may become more popular. However, to gain traction, more clever solutions and faster data transfer speeds will be required in order to add sufficient security in the future.
+NFC is a young technology and is rapidly growing in popularity due to the deployment of mobile payment system. While the quick setup and ability to communicate with passive tags is attractive, we think that NFC needs to overcome a few hurdles before it becomes ubiquitous. Namely, based on the research we have covered in this paper, security and data transfer speed are significant issues facing NFC. In the first paper, Jensen, Gouda, and Qiu were able to provide a clever solution to the present security holes by introducing a fortified security scheme for contactless credit cards. While their solution is certainly novel, we discovered that the limited range of NFC is not enough to guarantee security. In the second paper, we reviewed several implementations of mass transit ticketing using NFC on mobile phones. The Nokia researchers were able to provide acceptable solutions given the current state of technology, but have clearly highlighted that the slow data transfer speed of NFC is an obstacle to work around. Finally, Gummeson et all introduced a clever, device independent hardware firewall for NFC on an everyday mobile device. The design of the EnGarde device appears to be incredibly successful at jamming signals, but we note that the protection may only be as good as the blacklist it uses. Overall, it appears that NFC is a user friendly, flexible communication interface that may become more popular. However, to gain traction, more clever solutions and faster data transfer speeds will be required in order to add sufficient security in the future.
 
 \section*{Acknowledgments}
 \label{sec:acknowledgments}
