@@ -74,7 +74,7 @@ A standard RFID reader-tag interaction is illustrated in Figure~\ref{fig:rfid}. 
 \begin{figure}
 \centering
 \psfig{file=figures/emitterAndTagWide.png,width=3in,natwidth=700,natheight=189}
-\caption{Readers and tags interact with each other using tuned antenna coils and electromagnetic induction.}
+\caption{Readers and tags interact with each other using antenna coils and electromagnetic induction.}
 %Neat diagram from http://www.mouser.com/applications/rfid-nfc-introduction/ and another at http://electronicdesign.com/communications/nfcrfid-ripe-application-expansion
 \label{fig:rfid}
 \end{figure}
@@ -135,7 +135,7 @@ In this attack, a malicious party is able to capture sensitive data by listening
 \begin{figure}
 \centering
 \psfig{file=figures/eavesdroppingAntenna.png,width=3in,natwidth=700,natheight=189}
-\caption{Eavesdropping antennas can be quite small and easy to conceal.~\cite{CC2016} (card for scale)}
+\caption{A small eavesdropping antenna~\cite{CC2016} (card for scale)}
 \label{fig:antenna}
 \end{figure}
 
@@ -201,7 +201,7 @@ In summary, G composes a binary string $x$ by setting values to 1 at indexes whe
 \section{NFC and Mass Transit Ticketing}
 \label{sec:mobile}
 
-Mass transit systems have widely adopted contactless NFC cards for identity verification and ticketing. Three Nokia researchers, Tamrakar, Ekberg, and Asokan, have published a paper investigating the use of NFC-enabled mobile phones for this application. In their paper, they seek to achieve security while keeping transaction time below 300ms -- a time budget stated in a white paper by Smart Card Alliance for public transport systems.
+Mass transit systems have widely adopted contactless NFC cards for identity verification and ticketing. In this section, we focus on the work of three Nokia researchers --- Tamrakar, Ekberg, and Asokan --- who have investigated the use of NFC-enabled mobile phones for ticketing. In their paper, they seek to achieve security while keeping transaction time below an industry recommended 300ms threshold.
 They first describe the the pieces involved in building a complete identity-verification ticketing architecture. Then, three implementations of mobile ticketing are introduced, prototyped, and critiqued.~\cite{Ticket2011}
 
 \subsection{Ticketing Architecture}
@@ -279,7 +279,7 @@ In terms of security, the Nokia researchers grant that since users need not inte
 
 Commercial payment systems such as Apple Pay and Android Pay are bringing NFC to our phones, which could introduce security risks in both payment and non-payment applications of NFC. A programmable, hardware-based firewall may be a viable way to defend against more general threats as new applications and attacks are developed. EnGarde is designed to be an extremely power efficient, semi-permanent attachment for everyday mobile phones. Such a device-independent security method, a metaphorical tin foil hat, could offer flexibly against current and evolving attacks on NFC enabled devices.~\cite{Gum2013}
 
-Our goal is to give an overview of the EnGarde security system prototyped by Gummeson et al. Figure \ref{fig:states} is used as a roadmap for our summary of EnGarde and its components.
+Our goal is to give an overview of the EnGarde security system prototyped by Gummeson et al in this section. Figure \ref{fig:states} is used as a roadmap for our summary of EnGarde.
 
 \subsection{No Power Mode}
 
@@ -315,12 +315,12 @@ Based on these results, it appears that the EnGarde hardware can be very effecti
 \section{Conclusion}
 \label{sec:conclusions}
 
-NFC is a young technology and is rapidly growing in popularity due to the deployment of mobile payment system. While the quick setup and ability to communicate with passive tags is attractive, we think that NFC needs to overcome a few hurdles before it becomes ubiquitous. Namely, based on the research we have covered in this paper, security and data transfer speed are significant issues facing NFC. In the first paper, Jensen, Gouda, and Qiu were able to provide a clever solution to the present security holes by introducing a fortified security scheme for contactless credit cards. While their solution is certainly novel, we discovered that the limited range of NFC is not enough to guarantee security. In the second paper, we reviewed several implementations of mass transit ticketing using NFC on mobile phones. The Nokia researchers were able to provide acceptable solutions given the current state of technology, but have clearly highlighted that the slow data transfer speed of NFC is an obstacle to work around. Finally, Gummeson et all introduced a clever, device independent hardware firewall for NFC on an everyday mobile device. The design of the EnGarde device appears to be incredibly successful at jamming signals, but we note that the protection may only be as good as the blacklist it uses. Overall, it appears that NFC is a user friendly, flexible communication interface that may become more popular. However, to gain traction, more clever solutions and faster data transfer speeds will be required in order to add sufficient security in the future.
+NFC is a young technology and is rapidly growing in popularity due to the deployment of mobile payment system. While the quick setup and ability to communicate with passive tags is attractive, we think that a few hurdles --- specifically security and data transfer speed --- need to be overcome before NFC becomes ubiquitous. In the first paper, Jensen, Gouda, and Qiu were able to provide a clever solution to the present security holes by introducing a fortified security scheme for contactless credit cards. While their solution is certainly novel, we discovered that the limited range of NFC is not enough to guarantee security. In the second paper, we reviewed several implementations of mass transit ticketing using NFC on mobile phones. The Nokia researchers were able to provide acceptable solutions given the current state of technology, but have clearly highlighted that the slow data transfer speed of NFC is an obstacle to work around. Finally, Gummeson et al introduced a clever, device independent hardware firewall for NFC on an everyday mobile device. The design of the EnGarde device appears to be incredibly successful at jamming signals, but we note that the protection may only be as good as the blacklist it uses. Overall, it appears that NFC is a user friendly, flexible communication interface that may become more popular. However, to gain traction, more clever solutions and faster data transfer speeds will be required in order to add sufficient security in the future.
 
 \section*{Acknowledgments}
 \label{sec:acknowledgments}
 
-I would like to thank everyone that helped with this project, espcially professors Nic McPhee, Elena Machkasova, and Kevin Byod who provided insightful guidance and feedback.
+I would like to thank everyone that helped with this project, especially professors Nic McPhee, Elena Machkasova, and Kevin Byod who provided insightful guidance and feedback.
 
 % The following two commands are all you need in the
 % initial runs of your .tex file to
