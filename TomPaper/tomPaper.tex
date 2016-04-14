@@ -214,8 +214,6 @@ They first describe the the pieces involved in building a complete identity-veri
 
 For NFC phones to be used for mass transit ticketing, additional infrastructure is required. An overview of the high level components and their iterations is illustrated in Figure~\ref{fig:ticketingArch}. The Accounting / Certificate Authority (CA) is a centralized entity responsible for issuing transport IDs, clearing transactions, maintaining billing information, and maintaining a blacklist. The User Device (D) is a smartphone capable of executing cryptographic operations. D uses WLAN or a mobile data connection to attain a transport ID from CA. The ticket reader (R) sits at transit gates. R communicates with the D using NFC and the other entities using infrastructure. Finally, the Transport Authority Backend (TA) is an entity capable of operating all of the ticket readers and gates. In addition, the TA collects evidence from D$\leftrightarrow$R transactions for calculating fares, submits such session evidence to the CA, and queries the CA blacklist in order to distribute changes to all ticket readers.
 
-The authors note that TA$\leftrightarrow$CA transactions will not be synchronous to the D$\leftrightarrow$R data transaction. This way, the ticket lines will not be slowed, with the exception of special blacklist query for user's first transit ride.
-
 \subsection{Security Tools}
 The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to several attacks. In order to maintain secure communication, several standard security and cryptography tools will be used.
 \vspace{2mm}\newline
