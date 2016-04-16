@@ -19,6 +19,7 @@
 % suppress navigation bar
 \beamertemplatenavigationsymbolsempty
 
+
 \mode<presentation>
 {
   \usetheme{bunsen}
@@ -41,6 +42,7 @@
 \DeclareCaptionFont{uiblack}{\color{uiblack}}
 \DeclareCaptionFont{uipoppy}{\color{uipoppy}}
 \captionsetup{labelfont={uipoppy},textfont=uiblack}
+\setbeamercolor{section in toc}{fg=uipoppy}
 
 % see the macros.tex file for definitions
 \include{macros}
@@ -90,19 +92,33 @@
   \textref{Image from wikipedia commons}
 \end{frame}
 
-
-
 \begin{frame}
   \frametitle{Outline}
-\tableofcontents[hideallsubsections]
-\end{frame}
+    \begin{center}\begin{minipage}{.9\textwidth}
+        \tableofcontents[
+          currentsection,
+          sectionstyle=show/show,
+          subsectionstyle=show/shaded/hide
+        ]
+    \end{minipage}\end{center}
+ \end{frame}
+
 
 \Fontix
+
 %-------------------------------------------------------------------
-%                          Section 1
+%                           Section
+\section{Background}
+\begin{frame}
+  \frametitle{Background}
+    \begin{center}\begin{minipage}{.9\textwidth}
+    \tableofcontents[currentsubsection, hideothersubsections, sectionstyle=show/shaded]
+    \end{minipage}\end{center}
+\end{frame}
+%
 %-------------------------------------------------------------------
 
-\section{Background}
+
 \subsection{Elements of HF RFID: Tags \& Readers}
 \begin{frame}
 \frametitle{Tags \& Readers}
@@ -142,7 +158,7 @@
 \begin{frame}
 \frametitle{Basic NFC Communication}
   \begin{columns}[T]
-    \begin{column}{.5\textwidth}
+    \begin{column}{.45\textwidth}
      \begin{block}{HF RFID Communication}
 		\begin{enumerate}
 		    \item{Reader emits electricity}
@@ -173,22 +189,84 @@
 \subsection{NFC on Mobile Phones}
 \subsection{NFC and the Payment Industry}
 \subsection{Security for NFC}
+
+%-------------------------------------------------------------------
+%                           Section
 \section{Contactless Credit Cards}
+\begin{frame}
+  \frametitle{Contactless Credit Cards}
+    \begin{center}\begin{minipage}{.9\textwidth}
+    \tableofcontents[currentsubsection, hideothersubsections, sectionstyle=show/shaded]
+    \end{minipage}\end{center}
+\end{frame}
+%
+%-------------------------------------------------------------------
 \subsection{Current Credit Card Protocol}
 \subsection{Credit Card Attacks}
 \subsection{Proposed Secure Credit Card Protocol}
+
+%-------------------------------------------------------------------
+%                           Section
 \section{NFC and Mass Transit Ticketing}
+\begin{frame}
+\frametitle{NFC and Mass Transit Ticketing}
+\begin{center}\begin{minipage}{.9\textwidth}
+\tableofcontents[currentsubsection, hideothersubsections, sectionstyle=show/shaded]
+\end{minipage}\end{center}
+\end{frame}
+%
+%-------------------------------------------------------------------
+
 \subsection{Ticketing Architecture}
-\section{EnGarde: A Physical Approach to NFC Security}
+
+
+%-------------------------------------------------------------------
+%                           Section
+\section{EnGarde: Physical NFC Security}
+\begin{frame}
+\frametitle{EnGarde: Physical NFC Security}
+\begin{center}\begin{minipage}{.9\textwidth}
+\tableofcontents[currentsubsection, hideothersubsections, sectionstyle=show/shaded]
+\end{minipage}\end{center}
+\end{frame}
+%
+%-------------------------------------------------------------------
+
 \subsection{No Power Mode}
 \subsection{System Idle Mode}
 \subsection{NFC Decoder Active Mode}
 \subsection{Jam Mode}
 \subsection{Experimental Evaluation of EnGarde}
-\section{Conclusions}
+
+
+%-------------------------------------------------------------------
+%                           Section
+\section{Conclusion}
 \begin{frame}
-  \frametitle{Conclusions}
+\frametitle{Conclusion}
+\begin{center}\begin{minipage}{.9\textwidth}
+\tableofcontents[currentsubsection, hideothersubsections, sectionstyle=show/shaded]
+\end{minipage}\end{center}
+\end{frame}
+%
+%-------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Conclusion}
   \begin{block}{Tinfoil Hats for Everyone!}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sources}
+  \begin{block}{Primary Research Sources}
+    \begin{enumerate}
+      \item{Oliver Jensen, Mohamed Gouda, and Lili Qiu. 2016. A secure credit card protocol over NFC. In Proceedings of the 17th International Conference on Distributed Computing and Networking (ICDCN '16). ACM, New York, NY, USA, Article 32 , 9 pages. %DOI=http://dx.doi.org.ezproxy.morris.umn.edu/10.1145/2833312.2833319
+      }
+      \item{Sandeep Tamrakar, Jan-Erik Ekberg, and N. Asokan. 2011. Identity verification schemes for public transport ticketing with NFC phones. In Proceedings of the sixth ACM workshop on Scalable trusted computing (STC '11). ACM, New York, NY, USA, 37-48. %DOI=http://dx.doi.org.ezproxy.morris.umn.edu/10.1145/2046582.2046591
+      }
+      \item{Jeremy J. Gummeson, Bodhi Priyantha, Deepak Ganesan, Derek Thrasher, and Pengyu Zhang. 2013. EnGarde: protecting the mobile phone from malicious NFC interactions. In Proceeding of the 11th annual international conference on Mobile systems, applications, and services (MobiSys '13). ACM, New York, NY, USA, 445-458. %DOI=http://dx.doi.org.ezproxy.morris.umn.edu/10.1145/2462456.2464455
+      }
+    \end{enumerate}
   \end{block}
 \end{frame}
 
