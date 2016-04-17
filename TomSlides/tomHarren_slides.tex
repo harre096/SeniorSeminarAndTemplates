@@ -289,6 +289,7 @@
 %-------------------------------------------------------------------
 %                           Section
 \section{Contactless Credit Cards}
+\subsection{Current Credit Card Protocol}
 \begin{frame}
   \frametitle{Contactless Credit Cards}
     \begin{center}\begin{minipage}{.9\textwidth}
@@ -298,35 +299,43 @@
 %
 %-------------------------------------------------------------------
 \begin{frame}
-\frametitle{Security for NFC}
+\frametitle{Contactless Credit Cards}
   \begin{center}
   \begin{minipage}{.9\textwidth}
   \begin{block}{Contactless Credit Cards}
     \begin{itemize}
       \item{Some credit cards contain passive NFC tags}
       \item{We focus on Jensen, Gouda, and Qiu's work on securing such cards in this section}
-      \item{Security solutions must be computationally inexpensive to run on a passive tag}
+      \item{Security solutions must be computationally inexpensive to run on passive tags}
     \end{itemize}
   \end{block}
   \end{minipage}
   \end{center}
 \end{frame}
 
-3. CONTACTLESS CREDIT CARDS
-In this section, we look at the usage of passively powered
-NFC tags installed into credit cards and some related security
-concerns. Jensen, Gouda, and Qiu’s [3] work is the
-focus of this section. They describe several effective contactless
-credit cards attacks and propose a security protocol
-to defend against these attacks. Since their security protocol
-must run on a passively powered NFC chips embedded
-in credit card, it is composed of computational inexpensive
-primitives including pre-computed hashes, indexing and
-XOR operations. [3]
-3.1 Current Credit C
+\begin{frame}
+\frametitle{Current Credit Protocol}
+  \begin{center}
+  \includegraphics[scale=.5]{../TomPaper/figures/CCcurrent.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Limited Security via iCCV}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+  \begin{block}{Contactless Credit Cards}
+    \begin{itemize}
+      \item{Card generates CCV each transation}
+      \item{iCCV is sent to point of sale}
+      \item{iCCV is validated by bank}
+    \end{itemize}
+  \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
 
 
-\subsection{Current Credit Card Protocol}
 \subsection{Credit Card Attacks}
 \subsection{Proposed Secure Credit Card Protocol}
 
