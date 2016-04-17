@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="emitterAndTag.svg">
+   sodipodi:docname="emitterAndTag.svg"
+   inkscape:export-filename="/home/tom/AppDev/ssem/TomSlides/figures/emitterAndTag.png"
+   inkscape:export-xdpi="188.89999"
+   inkscape:export-ydpi="188.89999">
   <defs
      id="defs4">
     <marker
@@ -98,7 +101,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="200.63668"
+     inkscape:cx="72.296803"
      inkscape:cy="526.80587"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -116,7 +119,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -280,7 +283,7 @@
            height="220"
            x="215.71428"
            y="445.21936" /></flowRegion><flowPara
-         id="flowPara5062"></flowPara></flowRoot>    <flowRoot
+         id="flowPara5062" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot5064"
        style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
@@ -290,7 +293,7 @@
            height="299"
            x="228"
            y="429.36221" /></flowRegion><flowPara
-         id="flowPara5070"></flowPara></flowRoot>    <ellipse
+         id="flowPara5070" /></flowRoot>    <ellipse
        style="opacity:0.70999995;fill:none;fill-opacity:0.54117647;stroke:#637aed;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.38431373"
        id="path5072"
        cx="235.5"
