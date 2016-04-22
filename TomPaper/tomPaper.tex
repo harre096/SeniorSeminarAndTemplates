@@ -47,7 +47,7 @@ In this paper, we focus on security and applications of NFC regarding payments a
 In Section~\ref{sec:creditCard}, we highlight several viable attacks on
 contactless credit cards and summarize a proposed solution.
 In Section~\ref{sec:mobile}, we discuss a prospective application for the richer NFC communication, using mobile phones for mass transit ticketing. Three implementations of mobile ticketing are introduced, prototyped, and critiqued by three Nokia researchers, each balancing security and transaction time in a unique way.
-This leads to a discussion of the EnGarde shield in Section~\ref{sec:enGarde}. Commercial payment systems such as Apple Pay and Android Pay are bringing NFC to mobile phones, which could introduce security risks in both payment and non-payment applications of NFC. The proposed device utilizes an independent, hardware-based firewall which may be a viable way to defend against more general threats.
+This leads to a discussion of the EnGarde shield in Section~\ref{sec:enGarde}. Commercial payment systems such as Apple Pay and Android Pay are bringing NFC to mobile phones, which could introduce security risks in both payment and non-payment applications of NFC. The proposed device utilizes a hardware-based firewall to defend against more general NFC threats.
 
 
 \section{Background}
@@ -61,7 +61,7 @@ Finally, we highlight the need for explicit security when using NFC.
 
 NFC is a wireless communication standard that is based on, and fully compatible with, the HF RFID (high frequency radio-frequency identification) standard~\cite{Gum2013}. At a fundamental level, this means that communication happens between tags and readers.
 
-A \textit{tag} is composed of an integrated circuit and an antenna. A tag is capable of storing a unique ID and a limited amount of data, which can be read/write or read only. RFID tags can be actively powered, battery assisted, or passively powered. A passive tag relies exclusively on energy induced into the tag's antenna coil. Since passive tags require no built in power source, they are the least expensive and smallest RFID tags. While the tag is powered, it can use its antenna coil to relay its internal information back to the other party.~\cite{wiki:RFID}
+A \textit{tag} is composed of an integrated circuit and an antenna. A tag is capable of storing a unique ID and a limited amount of data, which can be read/write or read only. RFID tags can be actively powered, battery assisted, or passively powered. A passive tag relies exclusively on energy induced into the tag's antenna coil. Since passive tags require no built-in power source, they are the least expensive and smallest RFID tags. While the tag is powered, it can use its antenna coil to relay its internal information back to the other party.~\cite{wiki:RFID}
 
 A \textit{reader} is a device used to power and interrogate RFID tags. A reader emits an electromagnetic field in order to power nearby tags. Before initiating communication, the reader runs a discovery protocol. If multiple tags respond, the reader uses its collision avoidance protocol to establish communication with a single tag using one tag's unique ID. The tag and the reader then communicate by taking turns sending and receiving messages.~\cite{Gum2013}
 
@@ -125,7 +125,7 @@ The final phase is called \textit{authorization} and only occurs if the bank dee
 
 \subsection{Credit Card Attacks}
 \label{sec:attacks}
-The following attacks on NFC transactions may vary slightly, but each method ultimately exposes sensitive card information. The first three attacks can be accomplished with merely a NFC compatible mobile phone and some additional, inexpensive hardware. The final attack, compromised point-of-sale, points out a more general weakness about the implementation of the current protocol.
+The following attacks on NFC transactions may vary, but each method ultimately exposes sensitive card information. The first three attacks only require a NFC compatible mobile phone and some additional, inexpensive hardware. The final attack, compromised point-of-sale, points out a more general weakness about the implementation of the current protocol.
 \vspace{2mm}\newline
 \noindent\textbf{Eavesdropping:}
 In this attack, a malicious party is able to capture sensitive data by listening in on the first two phases of a transaction. Thus, the card number, expiration data, iCVV, and bank name are gleaned by the malicious party. The iCVV cannot be used again, but the other information may already be enough to make a fraudulent purchase.
@@ -155,10 +155,10 @@ Using \textit{NFCProxy}, any NFC enabled Android device can skim information fro
 In this attack, two devices work in concert to rapidly carry out the skimming attack. Skimmed data is sent to an accomplice using a non-NFC communication channel such as wireless LAN. Once the accomplice receives the card data, they can replay it at a point of sale using their own phone.
 \vspace{2mm}\newline
 \noindent\textbf{Compromised Point-of-Sale:}
-This attack points out that since point-of-sale devices learn enough information to allow multiple charges, the point-of-sale is a natural target. If a point-of-sale is compromised, transaction becomes accessible to malicious parties. Jensen, Gouda, and Qiu list several merchants that have recently had their point-of-sale systems compromised including Target, Home Depot, and SuperValu stores.
+This attack points out that since point-of-sale devices learn enough information to allow multiple charges, the point-of-sale is a natural target. If a point-of-sale is compromised, transactions become accessible to malicious parties. Jensen, Gouda, and Qiu list several merchants that have recently had their point-of-sale systems compromised including Target, Home Depot, and SuperValu stores.
 
 \subsection{Proposed Secure Credit Card Protocol}
-To address these security concerns, Jensen, Gouda, and Qiu have proposed a secure protocol which shares the same four phases as the current credit card protocol (Figure~\ref{fig:currentCC}), but with several variations that will be described and illustrated using the Figure~\ref{fig:secureCC}.
+To address these security concerns, Jensen, Gouda, and Qiu have proposed a secure protocol which shares the same four phases as the current credit card protocol (Figure~\ref{fig:currentCC}), but with several variations that will be described and illustrated using Figure~\ref{fig:secureCC}.
 
 \begin{figure}
 \centering
@@ -179,7 +179,7 @@ Finally, the bank uses the \textit{UUID} to look up official card data. Then the
 \vspace{2mm}\newline
 \noindent\textbf{Requirements of function H:} H works like a hash function. It uses several inputs to creates an output that is indistinguishable from random and cannot be used to derive the original inputs. A hash output can only be verified by using creating a new copy of the output; if the inputs were the same, then the outputs will match.
 % So long as \textit{B}, the output of H function, appears random, no sensitive information can be learned from an eavesdropping attack. Also, when a skimming or relay attacker collects \textit{ch} and \textit{B} and attempts to replay the card information, it will not be able to calculate the new output value \textit{B$'$} when given the new challenge \textit{ch$'$}.
-Here is the pseudo-code for the function H:
+Here is the pseudo-code for the function H proposed by~\cite{CC2016}:
 
 \begin{lstlisting}
 function G(info, ch):
@@ -214,13 +214,13 @@ They first describe the the pieces involved in building a complete identity-veri
 \label{fig:ticketingArch}
 \end{figure}
 
-For NFC phones to be used for mass transit ticketing, additional infrastructure is required. An overview of the high level components and their iterations is illustrated in Figure~\ref{fig:ticketingArch}. The Accounting / Certificate Authority (CA) is a centralized entity responsible for issuing transport IDs, clearing transactions, maintaining billing information, and maintaining a blacklist. The blacklist keeps track of individuals who have been explicitly disallowed from using transit. The User Device (D) is a smartphone capable of executing cryptographic operations. D uses WLAN or a mobile data connection to attain a transport ID from CA. A ticket reader (R) is installed at each transit gate. R communicates with the D using NFC and the other entities using infrastructure. Finally, the Transport Authority Backend (TA) is an entity capable of operating all of the ticket readers and gates. In addition, the TA collects evidence from D$\leftrightarrow$R transactions for calculating fares, submits such session evidence to the CA, and queries the CA blacklist in order to distribute changes to all ticket readers.
+For NFC phones to be used for mass transit ticketing, additional infrastructure is required. An overview of the high level components and their interactions are illustrated in Figure~\ref{fig:ticketingArch}. The Accounting / Certificate Authority (CA) is a centralized entity responsible for issuing transport IDs, clearing transactions, maintaining billing information, and maintaining a blacklist. The blacklist keeps track of the individuals who have been explicitly disallowed from using the transit system. The User Device (D) is a smartphone capable of executing cryptographic operations. D uses WLAN or a mobile data connection to attain a transport ID from CA. A ticket reader (R) is installed at each transit gate. R communicates with the D using NFC and the other entities using infrastructure. Finally, the Transport Authority Backend (TA) is an entity capable of operating all of the ticket readers and gates. In addition, the TA collects evidence from D$\leftrightarrow$R transactions for calculating fares, submits such session evidence to the CA, and queries the CA blacklist in order to distribute changes to all ticket readers.
 
 \subsection{Security Tools}
 The limited range of NFC offers some security, but data transmitted using NFC is still vulnerable to several attacks. In order to maintain secure communication, several standard security and cryptography tools will be used.
 \vspace{2mm}\newline
 \noindent\textbf{Trusted Hardware:}
-Mobile phones are capable of doing cryptographic operations which are executed in the phone's \textit{trusted execution environment}, or TEE. Some TEEs are hardware agnostic while others extend core processing to strengthen security. In both implementations, TEEs aim to provide a secure location of sensitive data and computations.~\cite{Ticket2011}
+Mobile phones are capable of doing cryptographic operations which are executed in the phone's \textit{trusted execution environment}, or TEE. Some TEEs are hardware agnostic while others extend core processing to strength- en security. In both implementations, TEEs aim to provide a secure location for sensitive data and computations.~\cite{Ticket2011}
 %\vspace{2mm}\newline
 %\noindent\textbf{EMV:}
 %EVM is a global payment standard, developed by Europay, MasterCard, and Visa, that defines chip-based credit card standards as well as three offline data authentication techniques.~\cite{Ticket2011} Presently, EMV chip technology is being deployed as an alternative to magnetic stripe based cards in the United States. Additionally, EMV is the basis for mobile payment technologies such as Apple Pay and Android Pay.
@@ -228,7 +228,7 @@ Mobile phones are capable of doing cryptographic operations which are executed i
 \textbf{Secure Communications:}
 There are various methods for securing communication over an insecure channel such as NFC. In a simple symmetric key system, both parties have a secret key that is used to encrypt and decrypt messages at each end of a communication channel. This works very well, but distributing the private key to both parties can present a problem. The asymmetric key system works differently, requiring both a private key and a complementary public key. Public keys are distributed and can be used by anyone to encrypt a message that can only be decrypted by the matching private key.
 
-In addition to messages being encrypted, they can also be authenticated and protected against modification using a \textit{signature} or \textit{message authentication code} ($MAC$). Both of these tools are similar as they use keys to generate a distinct, verifiable message based on the contents of the message body. MACs create this verifible message using a symmetric key, while signatures use an asymmetric key.\cite{crypto}
+In addition to messages being encrypted, they can also be authenticated and protected against modification using a \textit{signature} or \textit{message authentication code} ($MAC$). Both of these tools are similar as they use keys to generate a distinct, verifiable message based on the contents of the message body. MACs create this verifible message using a symmetric key, while signatures use an asymmetric key.~\cite{crypto}
 
 \subsection{Ticketing Protocols}
 In the standard protocol, D first uses WLAN or mobile data to attain an identity \textit{certificate} from CA that is valid for several months. A certificate is a digital document containing attributes associated to the holder, in this case D, from the trusted party, the CA~\cite{crypto}. Under the D$\leftrightarrow$R transaction begins, D first receives a challenge from R.  D then sends its certificate and uses the challenge to build a signature. Once R receives and validates both the certificate and signature, checks for D on a blacklist, and opens the gate.
