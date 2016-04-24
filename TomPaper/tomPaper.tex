@@ -39,14 +39,14 @@ Near Field Communication (NFC) is a technology that is rapidly growing in popula
 
 \section{Introduction}
 \label{sec:introduction}
-Near Field Communication is a technology that is rapidly growing in popularity and is becoming even more common due to the advent of mobile payment systems. \textit{Near Field Communication} (NFC) is built upon High Frequency Radio Frequency Identification technology, more commonly known as HF RFID. NFC is restricted to a shorter range than RFID and offers interactive communication method between devices that have both passive and active components. An NFC connection can be set up quickly and connectivity does not require line of sight. Uses of NFC technologies are being rapidly developed to be used in payment systems and in other applications~\cite{Gum2013}.
+Near Field Communication is a technology that is rapidly growing in popularity and is becoming even more common due to the advent of mobile payment systems such as Apple and Android Pay. \textit{Near Field Communication} (NFC) is built upon High Frequency Radio Frequency Identification technology, more commonly known as HF RFID. NFC is restricted to a shorter range than RFID and offers interactive communication method between devices that have both passive and active components. An NFC connection can be set up quickly and connectivity does not require line of sight. Uses of NFC technologies are being rapidly developed to be used in payment systems and in other applications~\cite{Gum2013}.
 
-NFC is a flexible communication technology, but it is not inherently secure. The limited range of NFC may make attacks more difficult, but data transmitted using NFC is still vulnerable. For sensitive data, measures to ensure confidentiality, integrity, and authentication need to be implemented as an extension of NFC~\cite{CC2016}. One proposed technology offers a flexible hardware firewall that may be an effective way to block data transfers with malicious peers~\cite{Gum2013}.
+NFC is a flexible communication technology, but it is not inherently secure. The limited range of NFC may make attacks more difficult, but data transmitted using NFC is still vulnerable. For sensitive data, such as credit card information, measures to ensure confidentiality, integrity, and authentication need to be implemented as an extension of NFC~\cite{CC2016}. One proposed technology offers a flexible hardware firewall that may be an effective way to block data transfers with malicious peers~\cite{Gum2013}.
 
 In this paper, we focus on security and applications of NFC regarding payments and ticketing. First, we describe the foundations of Near Field Communication in Section~\ref{sec:background}. Then, we discuss security in three different NFC contexts: contactless credit cards, mobile ticketing applications, and physical NFC security.
 In Section~\ref{sec:creditCard}, we highlight several viable attacks on
 contactless credit cards and summarize a proposed solution.
-In Section~\ref{sec:mobile}, we discuss a prospective application for the richer NFC communication, using mobile phones for mass transit ticketing. Three implementations of mobile ticketing are introduced, prototyped, and critiqued by three Nokia researchers, each balancing security and transaction time in a unique way.
+In Section~\ref{sec:mobile}, we discuss a prospective application for richer NFC communication, using mobile phones for mass transit ticketing. We summarize the work of three Nokia researchers who introduce a mass transit ticketing protocol, along with two variations and attempt to balance security and transaction time.
 This leads to a discussion of the EnGarde shield in Section~\ref{sec:enGarde}. Commercial payment systems such as Apple Pay and Android Pay are bringing NFC to mobile phones, which could introduce security risks in both payment and non-payment applications of NFC. The proposed device utilizes a hardware-based firewall to defend against more general NFC threats.
 
 
@@ -140,16 +140,17 @@ In this attack, a malicious party is able to capture sensitive data by listening
 The researchers demonstrated the feasibility of this attack by building an eavesdropper using an NFC tag and an inexpensive radio. The very small, easy concealable eavesdropping antenna is shown in Figure~\ref{fig:antenna}. The antenna could be mounted or held within the range of a contactless NFC credit card terminal.
 \vspace{2mm}\newline
 \noindent\textbf{Skimming:}
-In this attack, illustrated in Figure~\ref{fig:skim}, a skimmer gains a victim's credit card information, including a single usable iCVV, by masquerading as a point-of-sale. After the skimmer has captured this data, it can replay the credit card information to a genuine point-of-sale to perform an illegitimate purchase on behalf of the victim.
+In this attack%, illustrated in Figure~\ref{fig:skim},
+a skimmer gains a victim's credit card information, including a single usable iCVV, by masquerading as a point-of-sale. After the skimmer has captured this data, it can replay the credit card information to a genuine point-of-sale to perform an illegitimate purchase on behalf of the victim.
 
 Surprisingly, this attack can be carried out by simply installing an Android application called \textit{NFCProxy}.\footnote{\textit{NFCProxy} was presented at DefCon 20 and can be downloaded at: https://sourceforge.net/projects/nfcproxy/~\cite{CC2016}}
 Using \textit{NFCProxy}, any NFC enabled Android device can skim information from a contactless credit card which can later be used to make a purchase. To make subsequent purchases, the attack can be repeated to obtain new iCVVs.
-\begin{figure}
-\centering
-\psfig{file=figures/CCskim.png,width=3in,natwidth=700,natheight=189}
-\caption{Skimmers capture, then replay, card data.~\cite{CC2016}}
-\label{fig:skim}
-\end{figure}
+%\begin{figure}
+%\centering
+%\psfig{file=figures/CCskim.png,width=3in,natwidth=700,natheight=189}
+%\caption{Skimmers capture, then replay, card data.~\cite{CC2016}}
+%\label{fig:skim}
+%\end{figure}
 \vspace{2mm}\newline
 \noindent\textbf{Relay Attacks:}
 In this attack, two devices work in concert to rapidly carry out the skimming attack. Skimmed data is sent to an accomplice using a non-NFC communication channel such as wireless LAN. Once the accomplice receives the card data, they can replay it at a point of sale using their own phone.
@@ -204,7 +205,7 @@ In summary, G composes a binary string $x$ by setting values to 1 at indexes whe
 \label{sec:mobile}
 
 Mass transit systems have widely adopted contactless NFC cards for identity verification and ticketing. In this section, we focus on the work of three Nokia researchers --- Tamrakar, Ekberg, and Asokan ~\cite{Ticket2011} --- who have investigated the use of NFC-enabled mobile phones for ticketing. In their paper, they seek to achieve security while keeping transaction time below an industry recommended 300ms threshold.
-They first describe the the pieces involved in building a complete identity-verification ticketing architecture. Then, three implementations of mobile ticketing are introduced, prototyped, and critiqued.~\cite{Ticket2011}
+They first describe the the pieces involved in building a complete identity-verification ticketing architecture. Then, an implementation of mobile ticketing, along with two variations, are introduced, prototyped, and critiqued.~\cite{Ticket2011}
 
 \subsection{Ticketing Architecture}
 \begin{figure}
