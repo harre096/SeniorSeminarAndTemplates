@@ -33,7 +33,7 @@
 \setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
 
 % color definitions
-\usepackage{color}
+\usepackage{color, soul}
 \definecolor{uipoppy}{RGB}{225, 64, 5}
 \definecolor{uipaleblue}{RGB}{96,123,139}
 \definecolor{uiblack}{RGB}{0, 0, 0}
@@ -43,11 +43,12 @@
 \DeclareCaptionFont{uipoppy}{\color{uipoppy}}
 \captionsetup{labelfont={uipoppy},textfont=uiblack}
 \setbeamercolor{section in toc}{fg=uipoppy}
+\setulcolor{uipoppy}
 
 % see the macros.tex file for definitions
 \include{macros}
 
-
+\setbeamercovered{invisible}
 % title slide definition
 \title{Security of Near Field Communication:\break Does My Phone Need A Tinfoil Hat?}
 \author{Thomas Harren}
@@ -74,43 +75,32 @@
  {\includegraphics[width=\paperwidth,height=\paperheight]{slide_bg}}
 \setbeamertemplate{footline}[bunsentheme]
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{frontpage_bg.png}}%
-  \begin{frame}
-  \frametitle{Have you used NFC?}
-    \begin{columns}[T]
-      \begin{column}{.5\textwidth}
-    		\begin{block}{}
-    		  \begin{center}
-      		\includegraphics[scale=.5]{figures/wikimediatag.jpg}
-      		\end{center}
-      	\end{block}
-      \end{column}
-      \begin{column}{.5\textwidth}
-          test
-      \end{column}
-    \end{columns}
-    \textref{Image from wikipedia commons}
-  \end{frame}
-}
+\begin{frame}
+\frametitle{Have you used NFC?}
+  		\begin{block}{}
+  		  \begin{center}
+    		\includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/wikimediatag.jpg}
+    		\includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/gayHall.jpg}
+        \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/ApplePay.jpg}
+        \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/peer.jpg}
+        \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/higbies.jpg}
+      \end{center}
+    \end{block}
+\end{frame}
 
 \begin{frame}
 \frametitle{Modivation}
-  \begin{columns}[T]
-    \begin{column}{.5\textwidth}
-  		\begin{block}{}
-  		  \begin{center}
-          \begin{itemize}
-    		    \item{What is NFC and how does it work?}
-    		    \item{Is it secure and should I trust it?}
-    		    \item{Is NFC the future?}
-       		\end{itemize}
-    		\end{center}
-    	\end{block}
-    \end{column}
-    \begin{column}{.5\textwidth}
-        test
-    \end{column}
-  \end{columns}
+  \begin{center}
+    \begin{minipage}{.7\textwidth}
+  	 \begin{block}{Questions about NFC}
+        \begin{itemize}
+  		    \item{What is NFC and how does it work?}
+  		    \item{Is it secure and should I trust it?}
+  		    \item{Is NFC the future?}
+     		\end{itemize}
+     \end{block}
+    \end{minipage}
+  \end{center}
 \end{frame}
 
 \begin{frame}
@@ -142,66 +132,101 @@
 
 \subsection{Elements of HF RFID: Tags \& Readers}
 \begin{frame}
+  \frametitle{NFC \textit{is} HF-RFID}
+    \begin{center}\begin{minipage}{.9\textwidth}
+      \begin{itemize}
+        \item{NFC is built using elements of \textit{high-frequency radio frequency identification} (HF RFID)}\newline
+
+        \begin{minipage}{.9\textwidth}\centering
+          \vspace{5mm}
+          \includegraphics<1>[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/rfid.png}
+          \includegraphics<2->[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/rfidFade.png}
+        \end{minipage}
+        \vspace{5mm}
+
+        \item<3->{Communication happens between tags and readers}
+        \item<4->{We'll cover NFC specific components in a bit}
+      \end{itemize}
+    \end{minipage}\end{center}
+\end{frame}
+
+
+\begin{frame}
 \frametitle{Tags \& Readers}
 
   \begin{columns}[T]
-    \begin{column}{.5\textwidth}
-  		\begin{block}{}
-  		  	\begin{center}
-  			NFC is built using from elements of \textit{high-frequency radio frequency identification} (HF RFID).
-  			\newline
-  			\newline
-    		\includegraphics[scale=.5]{figures/wikimediatag.jpg}
-    		\end{center}
-    	\end{block}
+    \begin{column}{.5\textwidth}\centering
+        \vspace{3mm}
+        \includegraphics[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/wikimediatagWide.jpg}
     \end{column}
     \begin{column}{.5\textwidth}
         \begin{block}{Tag}
-		\begin{itemize}
-		    \item{A tiny circuit with an antenna coil}
-		    \item{Stores limited information}
-		    \item{Can be powered or passive}
-        	\item{Passive tags are smallest and cheapest}
-   		\end{itemize}
-    	\end{block}
-        \begin{block}{Reader}
-    	\begin{itemize}
-		    \item{Reader emits electricity using an antenna coil}
-		    \item{Initiates communication}
-   		\end{itemize}
-    \end{block}
+          \begin{itemize}
+              \item{A tiny circuit with an antenna coil}
+              \pause
+              \item{Stores limited information}
+              \pause
+              \item{Can be powered or passive}
+              \pause
+              \item{Passive tags are smallest and cheapest}
+              \pause
+            \end{itemize}
+          \end{block}
     \end{column}
   \end{columns}
-  \textref{Image from wikipedia commons}
+
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}\centering
+        \vspace{3mm}
+        \includegraphics[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/higbies.jpg}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{block}{Reader}
+	       \begin{itemize}
+          \item{Reader emits electricity using an antenna coil}
+          \pause
+          \item{Initiates communication}
+         \end{itemize}
+       \end{block}
+    \end{column}
+  \end{columns}
 \end{frame}
+
 
 
 \begin{frame}
 \frametitle{Contactless NFC Communication}
   \begin{center}\begin{minipage}{.9\textwidth}
+  \vspace{4mm}
   \begin{columns}[T]
     \begin{column}{.5\textwidth}
-     \begin{block}{HF RFID Communication}
-		\begin{enumerate}
-		    \item{Reader emits electricity}
-		    \item{Tag is activated by induced power}
-        	\item{Reader runs discovery protocol, selecting tag by unique ID}
-        	\item{Communication ensues}
-   		\end{enumerate}
-    \end{block}
-         \begin{block}{Features}
-		\begin{itemize}
-        	\item{Quick setup}
-        	\item{Line of sight not required}
-   		\end{itemize}
-    \end{block}
+      \begin{block}{}
+        \begin{center}
+          \includegraphics[width=0.4\paperwidth]{figures/emitterAndTag.png}
+        \end{center}
+      \end{block}
     \end{column}
     \begin{column}{.5\textwidth}
-    \begin{block}{}
-     \begin{center}
-     \includegraphics[width=0.4\paperwidth]{figures/emitterAndTag.png}
-     \end{center}
+      \vspace{4mm}
+     \begin{block}{HF RFID Communication}
+		\begin{enumerate}
+        \pause
+		    \item{Reader emits electricity}
+        \pause
+		    \item{Tag is activated by induced power}
+        \pause
+      	\item{Reader runs discovery protocol, selecting tag by unique ID}
+        \pause
+      	\item{Communication ensues}
+   		\end{enumerate}
     \end{block}
+%    \pause
+%    \begin{block}{Features}
+%		  \begin{itemize}
+%        	\item{Quick setup}
+%        	\item{Line of sight not required}
+%   		\end{itemize}
+%    \end{block}
     \end{column}
   \end{columns}
   \end{minipage}\end{center}
@@ -214,10 +239,10 @@
 \end{frame}
 %%%reset slide%%%
 \begin{frame}
-\frametitle{\textcolor{uipoppy}{Physics:} Electromagnetic Induction}
+\frametitle{\ul{Physics:} Electromagnetic Induction}
   \includegraphics[scale=.5]{figures/arrow.png}
   \begin{center}\begin{minipage}{.9\textwidth}
-     \begin{block}{Tom, this is a computer science presentation, \newline not physics. Why...?}
+     \begin{block}{Tom, this is a computer science presentation, \newline not physics...}
      	%But its pretty neat stuff.
      \end{block}
   \end{minipage}\end{center}
