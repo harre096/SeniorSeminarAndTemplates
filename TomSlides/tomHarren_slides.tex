@@ -422,30 +422,53 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Current Credit Protocol}
-  \begin{center}
+\frametitle{Current Credit Protocol}\centering
   \includegraphics<1>[scale=.5]{figures/CCcurrent0.png}
   \includegraphics<2>[scale=.5]{figures/CCcurrent1.png}
   \includegraphics<3>[scale=.5]{figures/CCcurrent2.png}
   \includegraphics<4>[scale=.5]{figures/CCcurrent3.png}
   \includegraphics<5>[scale=.5]{figures/CCcurrent4.png}
-
-    \begin{minipage}{.6\textwidth}
-      \vspace{3mm}
-      \begin{block}<1>{Security depends upon}
-        \begin{itemize}
-          \item{Card generated iCVV each transaction}
-          \item{The limited range of NFC}
-        \end{itemize}
-      \end{block}
-      \begin{block}<2>{Solicitation}
-        \begin{itemize}
-          \item{Point of Sale and Credit card exchange static messages}
-          \item{For example, card may identify itself as \texttt{VISA CREDIT}}
-        \end{itemize}
-      \end{block}
+  \newline\vspace{3mm}
+    \begin{minipage}[t][5mm][t]{.7\textwidth}
+      \only<1>{
+        \begin{block}{Security depends upon}
+          \begin{itemize}
+            \item{Each transaction's card generated iCVV}
+            \item{The limited range of NFC}
+          \end{itemize}
+        \end{block}
+      }
+      \only<2>{
+        \begin{block}{Solicitation}
+          \begin{itemize}
+            \item{Point of Sale and Credit card exchange static messages}
+            \item{For example, card may identify itself as \texttt{VISA CREDIT}}
+          \end{itemize}
+        \end{block}
+      }
+      \only<3>{
+        \begin{block}{Card Information}
+          \begin{itemize}
+            \item{Credit card transmits card information, including:\newline       \textbf{\textcolor{uipaleblue}{card number, expiration, bank name, and iCVV}}}
+            \item{Unfortunately, this transmission is in plain text}
+          \end{itemize}
+        \end{block}
+      }
+      \only<4>{
+        \begin{block}{Charge request}
+          \begin{itemize}
+            \item{Card number, expiration, and iCVV are sent to the indicated bank}
+          \end{itemize}
+        \end{block}
+      }
+      \only<5>{
+        \begin{block}{Authorization}
+          \begin{itemize}
+            \item{Bank verifies transaction by checking iCVV, location information, and other bank information}
+          \end{itemize}
+        \end{block}
+      }
     \end{minipage}
-  \end{center}
 \end{frame}
 
 
