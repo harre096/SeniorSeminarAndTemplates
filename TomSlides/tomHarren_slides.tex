@@ -424,13 +424,24 @@
 \begin{frame}
 \frametitle{Current Credit Protocol}
   \begin{center}
-  \includegraphics[scale=.5]{../TomPaper/figures/CCcurrent.png}\newline
+  \includegraphics<1>[scale=.5]{figures/CCcurrent0.png}
+  \includegraphics<2>[scale=.5]{figures/CCcurrent1.png}
+  \includegraphics<3>[scale=.5]{figures/CCcurrent2.png}
+  \includegraphics<4>[scale=.5]{figures/CCcurrent3.png}
+  \includegraphics<5>[scale=.5]{figures/CCcurrent4.png}
+
     \begin{minipage}{.6\textwidth}
       \vspace{3mm}
-      \begin{block}{Security depends upon}
+      \begin{block}<1>{Security depends upon}
         \begin{itemize}
           \item{Card generated iCVV each transaction}
           \item{The limited range of NFC}
+        \end{itemize}
+      \end{block}
+      \begin{block}<2>{Solicitation}
+        \begin{itemize}
+          \item{Point of Sale and Credit card exchange static messages}
+          \item{For example, card may identify itself as \texttt{VISA CREDIT}}
         \end{itemize}
       \end{block}
     \end{minipage}
