@@ -195,7 +195,7 @@
 
 
 \begin{frame}
-\frametitle{Contactless NFC Communication}
+\frametitle{Contactless Communication}
   \begin{center}\begin{minipage}{.9\textwidth}
   \vspace{4mm}
   \begin{columns}[T]
@@ -208,7 +208,7 @@
     \end{column}
     \begin{column}{.5\textwidth}
       \vspace{4mm}
-     \begin{block}{HF RFID Communication}
+     \begin{block}{HF-RFID Communication}
 		\begin{enumerate}
         \pause
 		    \item{Reader emits electricity}
@@ -394,7 +394,9 @@
   \begin{block}{Contactless Credit Cards}
     \begin{itemize}
       \item{Some credit cards contain passive NFC tags}
+      \pause
       \item{We focus on Jensen, Gouda, and Qiu's work on securing such cards in this section}
+      \pause
       \item{Security solutions must be computationally inexpensive to run on passive tags}
     \end{itemize}
   \end{block}
@@ -403,26 +405,39 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Current Credit Protocol}
-  \begin{center}
-  \includegraphics[scale=.5]{../TomPaper/figures/CCcurrent.png}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Limited Security via iCCV}
+\frametitle{Limited Security via iCVV}
   \begin{center}
   \begin{minipage}{.9\textwidth}
   \begin{block}{Contactless Credit Cards}
     \begin{itemize}
-      \item{Card generates CCV each transation}
-      \item{iCCV is sent to point of sale}
-      \item{iCCV is validated by bank}
+      \item{Card generates an \textit{Dynamic Card Validation Value} (iCVV) for each transaction}
+      %\includegraphics[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/CVC2SampleVisaNew.png}
+      \pause
+      \item{The iCVV is sent to point of sale and then validated by bank}
     \end{itemize}
   \end{block}
   \end{minipage}
   \end{center}
+  %\textref{Image and background information taken from "Card security code" page on Wikipedia}
 \end{frame}
+
+\begin{frame}
+\frametitle{Current Credit Protocol}
+  \begin{center}
+  \includegraphics[scale=.5]{../TomPaper/figures/CCcurrent.png}\newline
+    \begin{minipage}{.6\textwidth}
+      \vspace{3mm}
+      \begin{block}{Security depends upon}
+        \begin{itemize}
+          \item{Card generated iCVV each transaction}
+          \item{The limited range of NFC}
+        \end{itemize}
+      \end{block}
+    \end{minipage}
+  \end{center}
+\end{frame}
+
+
 
 
 \subsection{Credit Card Attacks}
