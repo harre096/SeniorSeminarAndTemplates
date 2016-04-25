@@ -441,41 +441,29 @@
 
 \subsection{Credit Card Attacks}
 \begin{frame}
-\frametitle{Eavesdropping}
-  % \begin{center}
-  % \includegraphics[scale=.5]{../TomPaper/figures/CCcurrent.png}\newline
-  %   \begin{minipage}{.6\textwidth}
-  %     \vspace{3mm}
-  %     \begin{block}{Security depends upon}
-  %       \begin{itemize}
-  %         \item{Card generated iCVV each transaction}
-  %         \item{The limited range of NFC}
-  %       \end{itemize}
-  %     \end{block}
-  %   \end{minipage}
-  % \end{center}
-  \begin{columns}[T]
-    \begin{column}{.5\textwidth}\centering
-        % \vspace{3mm}
-         \includegraphics[width=\linewidth,height=0.6\textheight,keepaspectratio]{figures/eavesFlicker.jpg}
-    \end{column}
-    \begin{column}{.5\textwidth}
-        \begin{block}{Eavesdropping}
-          \begin{itemize}
-              \item{A third party is captures sensitive information sent between Point of Sale and Credit Card}
-              \pause
-              \item{Card number, expiration, bank name, and iCVV can be obtained}
-              \pause
-              \item{Attack is feasible requiring an inexpensive tag and radio}
-              \includegraphics[width=\linewidth,height=0.4\textheight,keepaspectratio]{figures/CCeaves.png}
-              \pause
-              \item{Passive tags are smallest and cheapest}
-              \pause
-            \end{itemize}
-          \end{block}
-    \end{column}
-  \end{columns}
-  \textref{Photo from Flicker}
+\frametitle{Eavesdropping}\centering
+     \begin{minipage}{.7\textwidth}
+              \begin{block}{Eavesdropping}
+                \begin{itemize}
+                  \item{A third party is captures sensitive information sent between Point of Sale and Credit Card}
+                  \item<2->{Card number, expiration, bank name, and iCVV can be obtained}
+                \end{itemize}
+              \end{block}
+              \begin{center}
+                \includegraphics[width=.7\linewidth,height=\textheight,keepaspectratio]{figures/CCeaves.png}
+              \end{center}
+     \end{minipage}
+  \textref{Photo of eavesdropper from Flicker}
+\end{frame}
+
+\begin{frame}
+\frametitle{Eavesdropping}\centering
+     \begin{minipage}{.7\textwidth}
+          The eavesdropping attack is feasible requiring an inexpensive tag and radio
+              \begin{center}
+                \includegraphics[width=.7\linewidth,height=\textheight,keepaspectratio]{../TomPaper/figures/eavesdroppingAntenna.png}
+              \end{center}
+     \end{minipage}
 \end{frame}
 
 \begin{frame}
