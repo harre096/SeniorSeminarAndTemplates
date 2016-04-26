@@ -521,10 +521,9 @@
 
 \subsection{Proposed Secure Credit Card Protocol}
 \begin{frame}
-\frametitle{Proposed Secure Credit Protocol}\centering
-  \includegraphics[width=\linewidth,height=.4\textheight,keepaspectratio]{../TomPaper/figures/secureCC.png}
-  \newline
-    \begin{minipage}[t][5mm][t]{.7\textwidth}
+\frametitle{Proposed Secure Credit Protocol}
+ \hspace*{2cm}\includegraphics[width=\linewidth,height=.3\textheight,keepaspectratio]{../TomPaper/figures/CCnew.png}\newline
+    \begin{minipage}[t][25mm][t]{\textwidth}
       \only<1>{
         \begin{block}{A credit card protocol restructured}
         \end{block}
@@ -537,25 +536,23 @@
         \end{block}
       }
       \only<3>{
-        \begin{block}{Restructured Card Information}
-          \circled{A}~~Phones can emulate tags
-          \begin{itemize}
-            \item{Credit card has been r       \textbf{\textcolor{uipaleblue}{card number, expiration, bank name, and iCVV}}}
-            \item{Unfortunately, this transmission is in plain text}
-          \end{itemize}
+        \begin{block}{Restructured Card Information}\vspace{2mm}
+          \circled{A}~~\textbf{\textit{UUID}}, a Universally Unique Identifier that is used to identify the credit card. The UUID is static.\vspace{2mm}\newline
+          \circled{B}~~\textit{\textbf{H(card info, ch, iCVV})} is used to authenticate the card's identity. Notice that the sensitive info, including the card number and expiration date, will not be transmitted in plain text.\vspace{2mm}\newline
+          \circled{C}~~\textbf{\textit{bank name}} is used to route the charge request.\newline
         \end{block}
       }
       \only<4>{
         \begin{block}{Charge request}
           \begin{itemize}
-            \item{Card number, expiration, and iCVV are sent to the indicated bank}
+            \item{Card information is sent to the indicated bank}
           \end{itemize}
         \end{block}
       }
       \only<5>{
         \begin{block}{Authorization}
           \begin{itemize}
-            \item{Bank verifies transaction by checking iCVV, location information, and other bank information}
+            \item{Bank verifies transaction}
           \end{itemize}
         \end{block}
       }
