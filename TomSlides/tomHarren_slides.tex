@@ -410,7 +410,7 @@
   \begin{minipage}{.9\textwidth}
   \begin{block}{Contactless Credit Cards}
     \begin{itemize}
-      \item{Card generates an \textit{Dynamic Card Validation Value} (iCVV) for each transaction}
+      \item{Card generates a pseudo-random \textit{Dynamic Card Validation Value} (iCVV) for each transaction}
       %\includegraphics[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/CVC2SampleVisaNew.png}
       \pause
       \item{The iCVV is sent to point of sale and then validated by bank}
@@ -493,19 +493,24 @@
 \begin{frame}
 \frametitle{Eavesdropping}\centering
      \begin{minipage}{.7\textwidth}
-          The eavesdropping attack is feasible requiring an inexpensive tag and radio
+          The eavesdropping attack is feasible, requiring only an inexpensive tag and radio
               \begin{center}
                 \includegraphics[width=.7\linewidth,height=\textheight,keepaspectratio]{../TomPaper/figures/eavesdroppingAntenna.png}
               \end{center}
+              \begin{itemize}
+                \pause
+                \item{A small antenna could easily be concealed near a terminal}
+              \end{itemize}
      \end{minipage}
 \end{frame}
 
 \begin{frame}
 \frametitle{Skimming \& Relay Attacks}\centering
-  % \begin{center}
-  \includegraphics[width=.7\linewidth,height=\textheight,keepaspectratio]{../TomPaper/figures/CCskimMask.png}\newline
+  \begin{center}
+    \includegraphics[width=.7\linewidth,height=\textheight,keepaspectratio]{../TomPaper/figures/CCskimMask.png}
+  \end{center}
     \begin{minipage}{.8\textwidth}
-      \vspace{3mm}
+     \vspace{-4mm}
       \begin{block}{The attaker masqurades as a card reader}
         \begin{itemize}
           \item{An unused iCVV can be \textit{skimmed} from the card}
@@ -514,7 +519,6 @@
           \item{In a relay attack, two devices execute the skimming attack in concert}
         \end{itemize}
       \end{block}
-    % \end{center}
     \end{minipage}
 \end{frame}
 
@@ -541,8 +545,8 @@
       }
       \only<3>{
         \begin{block}{Restructured Card Information}\vspace{2mm}
-          \circled{A}~~\textbf{\textit{UUID}}, a Universally Unique Identifier that is used to identify the credit card. The UUID is static.\vspace{2mm}\newline
-          \circled{B}~~\textit{\textbf{H(card info, ch, iCVV})} is used to authenticate the card's identity. Notice that the sensitive info, including the card number and expiration date, will not be transmitted in plain text.\vspace{2mm}\newline
+          \circled{A}~~\textbf{\textit{UUID}}, a static Universally Unique Identifier is used to identify the credit card.\vspace{2mm}\newline
+          \circled{B}~~\textit{\textbf{H(card number, expiration date, ch, iCVV})} is a hash like function used to authenticate the card's identity.\vspace{2mm}\newline
           \circled{C}~~\textbf{\textit{bank name}} is used to route the charge request.\newline
         \end{block}
       }
@@ -563,6 +567,27 @@
     \end{minipage}
 \end{frame}
 
+\begin{frame}
+\frametitle{Hash-like function H}\centering
+  \begin{minipage}[t][.4\textheight][t]{.8\textwidth}
+    \vspace{6mm}
+  \begin{block}{Requirements of H}
+    \begin{enumerate}
+      \item{\textbf{Output appears random} \newline
+      Prevents eavesdroppers from gleaning useful information}
+      \item{\textbf{Output cannot be used to derive components}\newline
+      Protects data. Also, without components, skimmers cannot create a new output that incorporates a new challenge}
+    \end{enumerate}
+  \end{block}
+  \end{minipage}
+
+  \begin{overlayarea}{.6\textheight}{.8\textwidth}
+    \begin{center}
+      \includegraphics<2>[width=\linewidth,height=\textheight,keepaspectratio]{figures/h50.png}
+      \includegraphics<3>[width=\linewidth,height=\textheight,keepaspectratio]{figures/h100.png}
+    \end{center}
+  \end{overlayarea}
+\end{frame}
 
 
 
