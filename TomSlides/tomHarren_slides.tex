@@ -480,11 +480,12 @@
               \begin{block}{Eavesdropping}
                 \begin{itemize}
                   \item{A third party captures sensitive information sent between Point of Sale and Credit Card}
-                  \item<2->{Card number, expiration, bank name, and \textit{used} iCVV can be obtained}
+                  \item<3->{Card number, expiration, bank name, and \textit{used} iCVV can be obtained}
                 \end{itemize}
               \end{block}
               \begin{center}
-                \includegraphics[width=.7\linewidth,height=\textheight,keepaspectratio]{figures/CCeaves.png}
+                \includegraphics<1>[width=.7\linewidth,height=\textheight,keepaspectratio]{figures/CCeaves0.png}
+                \includegraphics<2->[width=.7\linewidth,height=\textheight,keepaspectratio]{figures/CCeaves.png}
               \end{center}
      \end{minipage}
   \textref{Photo of eavesdropper from Flicker}
@@ -507,16 +508,16 @@
 \begin{frame}
 \frametitle{Skimming \& Relay Attacks}\centering
   \begin{center}
-    \includegraphics[width=.7\linewidth,height=\textheight,keepaspectratio]{../TomPaper/figures/CCskimMask.png}
+    \includegraphics<1>[width=.7\linewidth,height=\textheight,keepaspectratio]{../TomPaper/figures/CCskim.png}
+    \includegraphics<2->[width=.7\linewidth,height=\textheight,keepaspectratio]{../TomPaper/figures/CCskimMask.png}
   \end{center}
     \begin{minipage}{.8\textwidth}
      \vspace{-4mm}
       \begin{block}{The attaker masqurades as a card reader}
         \begin{itemize}
-          \item{An unused iCVV can be \textit{skimmed} from the card}
-          \item{Then, a fradulent purchase can occur at a real point of sale}
-          \pause
-          \item{In a relay attack, two devices execute the skimming attack in concert}
+          \item<3->{An unused iCVV can be \textit{skimmed} from the card}
+          \item<4->{Then, a fradulent purchase can occur at a real point of sale}
+          \item<5->{In a relay attack, two devices execute the skimming attack in concert}
         \end{itemize}
       \end{block}
     \end{minipage}
@@ -533,8 +534,12 @@
  \vspace{-6mm}
     \begin{minipage}[t][25mm][t]{\textwidth}
       \only<1>{
-        \begin{block}{A credit card protocol restructured}
-        \end{block}
+        \begin{center}
+          \vspace{6mm}
+          \begin{minipage}{.6\textwidth}
+            \begin{block}{A credit card protocol restructured}\end{block}
+          \end{minipage}
+        \end{center}
       }
       \only<2>{
         \begin{block}{Solicitation}
@@ -546,7 +551,7 @@
       \only<3>{
         \begin{block}{Restructured Card Information}\vspace{2mm}
           \circled{A}~~\textbf{\textit{UUID}}, a static Universally Unique Identifier is used to identify the credit card.\vspace{2mm}\newline
-          \circled{B}~~\textit{\textbf{H(card number, expiration date, ch, iCVV})} is a hash like function used to authenticate the card's identity.\vspace{2mm}\newline
+          \circled{B}~~\textit{\textbf{H(card info, ch, iCVV})} is a hash-like function used to authenticate the card's identity.\vspace{2mm}\newline
           \circled{C}~~\textbf{\textit{bank name}} is used to route the charge request.\newline
         \end{block}
       }
@@ -603,7 +608,46 @@
 %
 %-------------------------------------------------------------------
 
+\begin{frame}
+\frametitle{NFC and Mass Transit Ticketing}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+  \begin{block}{NFC and Mass Transit Ticketing}
+    \begin{itemize}
+      \item{Presently, contactless cards widely used for mass transit ticketing}
+      \pause
+      \vspace{1mm}
+      \item{Three Nokia reseachers investigate NFC phone based ticketing}
+      \pause
+      \vspace{1mm}
+      \item{Tamrakar, Ekberg, and Asokan's work is the focus of this section}
+    \end{itemize}
+  \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
+
 \subsection{Ticketing Architecture}
+\begin{frame}
+\frametitle{Proposed Ticketing Architecture}
+\begin{center}
+  %\begin{minipage}{.9\textwidth}
+  \includegraphics<1>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing55.png}
+  \includegraphics<2>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing60.png}
+  \includegraphics<3>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing65.png}
+  \includegraphics<4>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing70.png}
+  \includegraphics<5>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing75.png}
+  \includegraphics<6>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing80.png}
+  \includegraphics<7>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing85.png}
+  \includegraphics<8>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing90.png}
+  \includegraphics<9>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing95.png}
+  \includegraphics<10>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing100.png}
+%\end{minipage}
+\end{center}
+\end{frame}
+
+\subsection{Ticketing Protocols}
+\subsection{Viablitiy of Mobile Ticketing}
 
 
 %-------------------------------------------------------------------

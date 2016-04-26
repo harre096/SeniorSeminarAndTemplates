@@ -1,5 +1,6 @@
 {
     "commands": [
-        "*slides.tex : xelatex  {relFullPath}"
+        "*slides.tex : rm {relPath}tomHarren_slides.aux",
+        "*slides.tex : xelatex {relFullPath}"
     ]
 }
