@@ -627,26 +627,86 @@
   \end{center}
 \end{frame}
 
-\subsection{Ticketing Architecture}
+% \subsection{Ticketing Architecture}
+% \begin{frame}
+% \frametitle{Proposed Ticketing Architecture}
+% \begin{center}
+%   %\begin{minipage}{.9\textwidth}
+%   \includegraphics<1>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing55.png}
+%   \includegraphics<2>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing60.png}
+%   \includegraphics<3>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing65.png}
+%   \includegraphics<4>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing70.png}
+%   \includegraphics<5>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing75.png}
+%   \includegraphics<6>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing80.png}
+%   \includegraphics<7>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing85.png}
+%   \includegraphics<8>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing90.png}
+%   \includegraphics<9>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing95.png}
+%   \includegraphics<10>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing100.png}
+% %\end{minipage}
+% \end{center}
+% \end{frame}
+
+\subsection{Ticketing Protocols}
 \begin{frame}
-\frametitle{Proposed Ticketing Architecture}
+\frametitle{Proposed Ticketing Protocol}
 \begin{center}
-  %\begin{minipage}{.9\textwidth}
-  \includegraphics<1>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing55.png}
-  \includegraphics<2>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing60.png}
-  \includegraphics<3>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing65.png}
-  \includegraphics<4>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing70.png}
-  \includegraphics<5>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing75.png}
-  \includegraphics<6>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing80.png}
-  \includegraphics<7>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing85.png}
-  \includegraphics<8>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing90.png}
-  \includegraphics<9>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing95.png}
-  \includegraphics<10>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/ticketing100.png}
-%\end{minipage}
+  \includegraphics<1>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol0.png}
+  \includegraphics<2>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol5.png}
+  \includegraphics<3>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol10.png}
+  \includegraphics<4>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol15.png}
+  \includegraphics<5>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol20.png}
+  \includegraphics<6>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol25.png}
+  \includegraphics<7>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol30.png}
+  \includegraphics<8>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol35.png}
+  \includegraphics<9>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol40.png}
 \end{center}
 \end{frame}
 
-\subsection{Ticketing Protocols}
+
+\begin{frame}
+\frametitle{Protocol Variant 1}
+  \begin{center}
+    \begin{block}{Use symmetric keys instead of asymmetric keys}
+      \begin{itemize}
+        \pause
+        \item{Large RSA keys in certificate are the major cause on long data transfer times}
+        \pause
+        \item{Switching to symmetric-key system means that we must use a MAC (\textit{message authentication code}) rather than a signature.}
+        \pause
+      \end{itemize}
+    \end{block}
+    \begin{block}{Use tokens instead of certificates}
+      \begin{itemize}
+        \pause
+        \item{Send a small token that the reader can validate}
+        \pause
+        \item{For security, the token should be refreshed often}
+      \end{itemize}
+    \end{block}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Protocol Variant 1}
+\begin{center}
+  \includegraphics<1>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol45.png}
+  \includegraphics<2>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol50.png}
+  \includegraphics<3>[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol55.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Protocol Variant 2}
+  \begin{center}
+    \begin{block}{Use a reversed hash chain}
+      \begin{itemize}
+        \pause
+        \item{Offers timely tokens to be used with a long term certificate}
+      \end{itemize}
+    \end{block}
+  \end{center}
+\end{frame}
+
 \subsection{Viablitiy of Mobile Ticketing}
 
 
