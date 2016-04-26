@@ -21,6 +21,46 @@
    inkscape:export-ydpi="90">
   <defs
      id="defs4">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4370"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4364"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4346"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4340"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4334"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4320"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4314"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4298"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4292"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4240"
+       is_visible="true" />
     <marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
@@ -146,10 +186,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="136.1103"
-     inkscape:cy="615.5041"
+     inkscape:cx="290.98632"
+     inkscape:cy="770.79286"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g4400"
      showgrid="false"
      inkscape:window-width="1317"
      inkscape:window-height="744"
@@ -164,7 +204,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -404,5 +444,46 @@
        d="m 678.32116,467.49054 0,37.5859"
        id="path5256"
        inkscape:connector-curvature="0" />
+    <g
+       id="g4400"
+       transform="matrix(0.41845571,-0.29876497,0.38183437,0.53480422,225.12993,454.16685)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4312"
+         d="m 326.88903,183.54962 -0.43113,0.0915 c 4.74715,15.69438 13.23234,26.16557 25.13011,31.83543 11.89778,5.66985 27.17866,6.52858 45.4823,3.07553 l -0.098,-0.36221 c -18.23651,3.44038 -33.39152,2.57378 -45.16395,-3.03634 -11.77242,-5.61012 -20.19151,-15.97342 -24.91931,-31.60387 z"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <g
+         id="g4462"
+         transform="matrix(0.959161,-0.18825933,0.30954735,0.9581181,-42.142233,87.145385)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.85714293;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 368.2246,219.47944 c -8.95327,-1.04434 -17.44501,-4.43352 -24.28852,-9.69389 -5.11184,-3.9293 -11.39385,-12.57645 -14.52036,-19.98721 -1.93082,-4.57663 -2.12317,-5.78142 -2.07671,-13.00768 0.0526,-8.17915 1.46105,-13.66788 4.59234,-17.8962 2.20346,-2.9754 7.0452,-6.08502 11.89545,-7.63985 4.39944,-1.41032 5.39559,-1.51889 13.49384,-1.4707 6.74814,0.0402 10.39228,0.35725 15.96683,1.3894 13.25498,2.4542 31.04088,7.68239 43.71867,12.85116 9.61312,3.91929 15.82436,3.74067 27.06286,-0.77825 14.26918,-5.73754 35.66786,-11.48153 48.58947,-13.04274 20.86402,-2.52082 32.87285,2.30316 37.76986,15.17227 0.97154,2.55319 1.31626,5.59201 1.325,11.68037 0.0108,7.51182 -0.17244,8.64598 -2.10149,13.00768 -9.90475,22.39523 -28.11298,32.04391 -55.66173,29.49558 -3.74139,-0.34609 -9.32287,-1.21863 -12.40329,-1.93898 -10.53465,-2.46349 -14.82044,-5.52536 -18.75511,-13.39907 -4.36838,-8.74162 -10.17634,-15.48484 -13.33713,-15.48484 -0.91345,0 -2.73889,1.20658 -4.83843,3.19812 -3.0098,2.85497 -4.5185,5.15765 -9.06589,13.837 -2.00281,3.82265 -5.36617,7.12456 -9.06944,8.90374 -8.48683,4.07737 -25.85157,6.2557 -38.29622,4.80409 z"
+           id="path4378"
+           inkscape:connector-curvature="0" />
+        <ellipse
+           ry="6.7909994"
+           rx="16.626221"
+           cy="218.75404"
+           cx="451.86902"
+           id="ellipse4394"
+           style="opacity:1;fill:#ff4005;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.70000005;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           transform="matrix(0.99768581,-0.06799275,0.13841997,0.99037362,0,0)" />
+        <ellipse
+           transform="matrix(-0.99768581,-0.06799275,-0.13841997,0.99037362,0,0)"
+           style="opacity:1;fill:#ff4005;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.70000005;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="ellipse4396"
+           cx="-402.01141"
+           cy="160.13213"
+           rx="16.626221"
+           ry="6.7909994" />
+        <rect
+           style="opacity:1;fill:#000005;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.70000005;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4398"
+           width="6.060915"
+           height="181.82745"
+           x="325.10669"
+           y="167.40767" />
+      </g>
+    </g>
   </g>
 </svg>

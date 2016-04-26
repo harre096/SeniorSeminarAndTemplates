@@ -480,7 +480,7 @@
               \begin{block}{Eavesdropping}
                 \begin{itemize}
                   \item{A third party is captures sensitive information sent between Point of Sale and Credit Card}
-                  \item<2->{Card number, expiration, bank name, and iCVV can be obtained}
+                  \item<2->{Card number, expiration, bank name, and \textit{used} iCVV can be obtained}
                 \end{itemize}
               \end{block}
               \begin{center}
@@ -501,24 +501,69 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Skimming \& Relay Attacks}
-  \begin{center}
-  \includegraphics[scale=.5]{../TomPaper/figures/CCcurrent.png}\newline
-    \begin{minipage}{.6\textwidth}
+\frametitle{Skimming \& Relay Attacks}\centering
+  % \begin{center}
+  \includegraphics[width=.7\linewidth,height=\textheight,keepaspectratio]{../TomPaper/figures/CCskimMask.png}\newline
+    \begin{minipage}{.8\textwidth}
       \vspace{3mm}
-      \begin{block}{Security depends upon}
+      \begin{block}{The attaker masqurades as a card reader}
         \begin{itemize}
-          \item{Card generated iCVV each transaction}
-          \item{The limited range of NFC}
+          \item{An unused iCVV can be \textit{skimmed} from the card}
+          \item{Then, a fradulent purchase can occur at a real point of sale}
+          \pause
+          \item{In a relay attack, two devices execute the skimming attack in concert}
         \end{itemize}
       \end{block}
+    % \end{center}
     \end{minipage}
-  \end{center}
+\end{frame}
+
+
+\subsection{Proposed Secure Credit Card Protocol}
+\begin{frame}
+\frametitle{Proposed Secure Credit Protocol}\centering
+  \includegraphics[width=\linewidth,height=.4\textheight,keepaspectratio]{../TomPaper/figures/secureCC.png}
+  \newline
+    \begin{minipage}[t][5mm][t]{.7\textwidth}
+      \only<1>{
+        \begin{block}{A credit card protocol restructured}
+        \end{block}
+      }
+      \only<2>{
+        \begin{block}{Solicitation}
+          \begin{itemize}
+            \item{Point of Sale now sends a challenge}
+          \end{itemize}
+        \end{block}
+      }
+      \only<3>{
+        \begin{block}{Restructured Card Information}
+          \circled{A}~~Phones can emulate tags
+          \begin{itemize}
+            \item{Credit card has been r       \textbf{\textcolor{uipaleblue}{card number, expiration, bank name, and iCVV}}}
+            \item{Unfortunately, this transmission is in plain text}
+          \end{itemize}
+        \end{block}
+      }
+      \only<4>{
+        \begin{block}{Charge request}
+          \begin{itemize}
+            \item{Card number, expiration, and iCVV are sent to the indicated bank}
+          \end{itemize}
+        \end{block}
+      }
+      \only<5>{
+        \begin{block}{Authorization}
+          \begin{itemize}
+            \item{Bank verifies transaction by checking iCVV, location information, and other bank information}
+          \end{itemize}
+        \end{block}
+      }
+    \end{minipage}
 \end{frame}
 
 
 
-\subsection{Proposed Secure Credit Card Protocol}
 
 %-------------------------------------------------------------------
 %                           Section
