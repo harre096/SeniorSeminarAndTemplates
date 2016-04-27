@@ -831,16 +831,107 @@
 
 
 \begin{frame}
+\frametitle{EnGarde Expectations}
+  \begin{center}
+
+    \begin{block}{EnGarde should defend against all NFC modes}
+      \begin{center}
+
+        \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/wikimediatag.jpg}
+        \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/higbies.jpg}
+        \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/peer.jpg}
+
+        \vspace{3mm}
+
+        \begin{minipage}{.7\textwidth}
+          \begin{itemize}
+            \item{Malicious tags}
+            \item{Malicious readers}
+            \item{Malicious peers}
+            \item{Malicious software installations}
+          \end{itemize}
+        \end{minipage}
+
+      \end{center}
+    \end{block}
+  \end{center}
+\end{frame}
+
+
+
+\begin{frame}
 \frametitle{EnGarde State Diagram}
 \begin{center}
-  \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states.png}
+  \begin{center}\textcolor{uipoppy}{We will describe each mode as we go}\end{center}\vspace{3mm}
+  \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states0.png}
+  \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states1.png}%%we'll start with No Power (flip)
 \end{center}
 \end{frame}
 
+
 \subsection{No Power Mode}
-\subsection{System Idle Mode}
+\begin{frame}
+\frametitle{EnGarde State: No Power}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+  \begin{block}{No Power}
+    \begin{itemize}
+      \item{Commercial payments systems are bringing NFC to phones}
+      \pause
+      \vspace{1mm}
+      \item{As a result, there may be new risks in both payment and non-payment applications of NFC}
+      \pause
+      \vspace{1mm}
+      \item{EnGarde is a semi-permanent phone attachment, designed to act as a hardware-based firewall}
+      \pause
+      \vspace{1mm}
+      \item{EnGarde's logic is independent from phone OS, and can be updated to combat current and future threats}
+      \pause
+      \vspace{1mm}
+      \item{Gummeson et al's work on the EnGarde prototype is the focus of this section}
+    \end{itemize}
+  \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{EnGarde State Diagram}
+\begin{center}
+  \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states2.png}
+\end{center}
+\end{frame}
+
 \subsection{NFC Decoder Active Mode}
+
+
+
+\begin{frame}
+\frametitle{EnGarde State Diagram}
+\begin{center}
+  \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states3.png}%%show at end of decode
+\end{center}
+\end{frame}
+
 \subsection{Jam Mode}
+\begin{frame}
+\frametitle{EnGarde State Diagram}
+\begin{center}
+  \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states4.png}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{EnGarde State Diagram}
+\begin{center}
+  \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states5.png}
+\end{center}
+\end{frame}
+
 \subsection{Experimental Evaluation of EnGarde}
 
 
