@@ -37,6 +37,7 @@
 \definecolor{uipoppy}{RGB}{225, 64, 5}
 \definecolor{uipaleblue}{RGB}{96,123,139}
 \definecolor{uiblack}{RGB}{0, 0, 0}
+\definecolor{uigrey}{RGB}{192,192,192}
 
 % caption styling
 \DeclareCaptionFont{uiblack}{\color{uiblack}}
@@ -713,6 +714,83 @@
 
 \subsection{Viability of Mobile Ticketing}
 
+\begin{frame}
+\frametitle{Viability of Mobile Ticketing}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+    \vspace{-1cm}
+    \begin{block}{Viability of Proposed Protocols}
+      \begin{table}
+        \centering
+        %\caption{Estimated protocol speeds}
+        \only<1-3>{
+          \begin{tabular}{c|c|c|c}
+            %RSA
+            Encryption Key Size & Standard & Variant 1 & Variant 2\\
+            \hline
+            1024 bits & 296 ms & 164 ms & 182 ms\\
+            1152 bits & 314 ms & 172 ms & 190 ms\\
+            2048 bits & 482 ms & 228 ms & 246 ms\\
+          \end{tabular}
+        }
+        \only<4-5>{
+          \begin{tabular}{c|c|c|c}
+            %RSA
+            Encryption Key Size & Standard & Variant 1 & Variant 2\\
+            \hline
+            \textcolor{uigrey}{1024 bits} & \textcolor{uigrey}{296 ms} & \textcolor{uigrey}{164 ms} & \textcolor{uigrey}{182 ms}\\
+            \textcolor{uigrey}{1152 bits} & \textcolor{uigrey}{314 ms} & \textcolor{uigrey}{172 ms} & \textcolor{uigrey}{190 ms}\\
+            2048 bits & 482 ms & 228 ms & 246 ms\\
+          \end{tabular}
+        }
+        \only<6>{
+          \begin{tabular}{c|c|c|c}
+            %RSA
+            Encryption Key Size & Standard & Variant 1 & Variant 2\\
+            \hline
+            \textcolor{uigrey}{1024 bits} & \textcolor{uigrey}{296 ms} & \textcolor{uigrey}{164 ms} & \textcolor{uigrey}{182 ms}\\
+            \textcolor{uigrey}{1152 bits} & \textcolor{uigrey}{314 ms} & \textcolor{uigrey}{172 ms} & \textcolor{uigrey}{190 ms}\\
+            2048 bits & \textcolor{red}{482 ms} & \textcolor{green}{228 ms} & \textcolor{green}{246 ms}\\
+          \end{tabular}
+        }
+      \end{table}
+      \begin{itemize}
+        \item<2->{NFC transfer speeds were the biggest bottleneck}
+        \item<3->{The authors noted that smaller two key sizes have been deprecated in the payment industry}
+        \item<5->{After taking the 300ms goal into account, only two options are viable}
+      \end{itemize}
+    \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Viability of Mobile Ticketing}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+    \begin{block}{Viability of Mobile Ticketing}
+        \begin{itemize}
+        \item{Using mobile ticketing offers convince and a richer user interface}
+        \pause
+        \vspace{1mm}
+        \item{The Nokia researchers grant that relay attacks are possible in all protocols, but that there is a short opportunity windows and low monetary gain }
+                %  \begin{enumerate}
+                %    \item{Tokens and hash-chain values limit window of opportunity}
+                %    \item{Public nature of transit stations make such attacks less attractive}
+                %    \item{Inexpensive tickets aren't likely worth stealing}
+                %  \end{enumerate}
+        \pause
+        \vspace{1mm}
+        \item{The authors state that these protocols are meets performance and security needs better than the current contactless card system}
+        \pause
+        \vspace{1mm}
+        \item{While mobile ticketing is an imperfect, it is valid path forward that offers value}
+      \end{itemize}
+    \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
+
 
 %-------------------------------------------------------------------
 %                           Section
@@ -751,6 +829,13 @@
   \end{center}
 \end{frame}
 
+
+\begin{frame}
+\frametitle{EnGarde State Diagram}
+\begin{center}
+  \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states.png}
+\end{center}
+\end{frame}
 
 \subsection{No Power Mode}
 \subsection{System Idle Mode}
