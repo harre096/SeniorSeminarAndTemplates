@@ -449,7 +449,8 @@
       \only<3>{
         \begin{block}{Card Information}
           \begin{itemize}
-            \item{Credit card transmits card information, including:\newline       \textbf{\textcolor{uipaleblue}{card number, expiration, bank name, and iCVV}}}
+            \item{Credit card transmits card information, including:\newline
+            \textbf{\textcolor{uipaleblue}{card number, expiration, bank name, and iCVV}}}
             \item{Unfortunately, this transmission is in plain text}
           \end{itemize}
         \end{block}
@@ -513,10 +514,10 @@
   \end{center}
     \begin{minipage}{.8\textwidth}
      \vspace{-4mm}
-      \begin{block}{The attaker masqurades as a card reader}
+      \begin{block}{The attacker masquerades as a card reader}
         \begin{itemize}
           \item<3->{An unused iCVV can be \textit{skimmed} from the card}
-          \item<4->{Then, a fradulent purchase can occur at a real point of sale}
+          \item<4->{Then, a fraudulent purchase can occur at a real point of sale}
           \item<5->{In a relay attack, two devices execute the skimming attack in concert}
         \end{itemize}
       \end{block}
@@ -669,12 +670,12 @@
 \begin{frame}
 \frametitle{Protocol Variant 1}
   \begin{center}
-    \begin{block}{Use symmetric keys instead of asymmetric keys}
+    \begin{block}{Use a lighter authentication method}
       \begin{itemize}
+        % \pause
+        % \item{Large RSA keys in certificate are the major cause on long data transfer times}
         \pause
-        \item{Large RSA keys in certificate are the major cause on long data transfer times}
-        \pause
-        \item{Switching to symmetric-key system means that we must use a MAC (\textit{message authentication code}) rather than a signature.}
+        \item{Switching from a signature to a MAC (\textit{message authentication code}) substantially reduces overhead}
         \pause
       \end{itemize}
     \end{block}
@@ -710,7 +711,7 @@
   \end{center}
 \end{frame}
 
-\subsection{Viablitiy of Mobile Ticketing}
+\subsection{Viability of Mobile Ticketing}
 
 
 %-------------------------------------------------------------------
@@ -724,6 +725,32 @@
 \end{frame}
 %
 %-------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{EnGarde: Physical NFC Security}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+  \begin{block}{EnGarde: Physical NFC Security}
+    \begin{itemize}
+      \item{Commercial payments systems are bringing NFC to phones}
+      \pause
+      \vspace{1mm}
+      \item{As a result, there may be new risks in both payment and non-payment applications of NFC}
+      \pause
+      \vspace{1mm}
+      \item{EnGarde is a semi-permanent phone attachment, designed to act as a hardware-based firewall}
+      \pause
+      \vspace{1mm}
+      \item{EnGarde's logic is independent from phone OS, and can be updated to combat current and future threats}
+      \pause
+      \vspace{1mm}
+      \item{Gummeson et al's work on the EnGarde prototype is the focus of this section}
+    \end{itemize}
+  \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
+
 
 \subsection{No Power Mode}
 \subsection{System Idle Mode}
