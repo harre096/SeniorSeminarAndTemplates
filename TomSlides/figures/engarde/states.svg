@@ -22,6 +22,21 @@
   <defs
      id="defs5132">
     <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4565"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4567"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker5430"
@@ -43,7 +58,8 @@
        refX="0"
        refY="0"
        orient="auto"
-       inkscape:stockid="Arrow2Lend">
+       inkscape:stockid="Arrow2Lend"
+       inkscape:collect="always">
       <path
          transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
@@ -276,15 +292,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="370.51801"
-     inkscape:cy="-1560.9663"
+     inkscape:zoom="1"
+     inkscape:cx="1045.0839"
+     inkscape:cy="-1374.6974"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g4939"
      showgrid="false"
-     inkscape:window-width="1317"
-     inkscape:window-height="744"
-     inkscape:window-x="49"
+     inkscape:window-width="1920"
+     inkscape:window-height="1176"
+     inkscape:window-x="1366"
      inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
@@ -295,7 +311,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -306,7 +322,9 @@
     <g
        id="g5395"
        transform="translate(18,2404)"
-       style="fill:#607b8b;fill-opacity:0.54117647">
+       style="fill:#607b8b;fill-opacity:0.54117647"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <ellipse
          ry="97.708267"
          rx="99.281837"
@@ -325,7 +343,7 @@
            style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
            y="158.35197"
            x="152.8129"
-           sodipodi:role="line">NFC Encoder </tspan><tspan
+           sodipodi:role="line">NFC Decoder </tspan><tspan
            id="tspan5297"
            style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
            y="186.47697"
@@ -334,7 +352,9 @@
     </g>
     <g
        id="g5390"
-       transform="translate(0,2400)">
+       transform="translate(0,2400)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <ellipse
          ry="97.708267"
          rx="99.281837"
@@ -358,7 +378,9 @@
     <g
        id="g5401"
        transform="translate(22,2420)"
-       style="fill:#607b8b;fill-opacity:0.54117647">
+       style="fill:#607b8b;fill-opacity:0.54117647"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <ellipse
          ry="97.708267"
          rx="99.281837"
@@ -384,7 +406,9 @@
        d="m 265.61824,2570.636 184.7119,-0.8839"
        id="path4606-8-5-9-1"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -392,7 +416,9 @@
        y="2489.3132"
        id="text6813-0-9-93"
        sodipodi:linespacing="125%"
-       transform="matrix(0.85093229,-0.52527539,0.52527539,0.85093229,0,0)"><tspan
+       transform="matrix(0.85093229,-0.52527539,0.52527539,0.85093229,0,0)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          x="-1108.6951"
          y="2489.3132"
@@ -403,14 +429,18 @@
        d="M 480.40917,2641.0432 253.73644,2781.3281"
        id="path4606-8-5-9-1-8"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="369.32275"
        y="2528.71"
        id="text6813-0-9-93-1"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          x="369.32275"
          y="2528.71"
@@ -426,20 +456,26 @@
        d="m 171.80757,2736.2501 0.10653,-70.3319"
        id="path4606-8-5-9-1-6"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-7)"
        d="m 453.98194,2838.0229 -184.7119,-0.8838"
        id="path4606-8-5-9-1-3"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="369.32275"
        y="2830.6694"
        id="text6813-0-9-93-1-7"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          x="369.32275"
          y="2830.6694"
@@ -451,7 +487,9 @@
        x="215.42429"
        y="2700.8318"
        id="text6813-0-9-93-1-3"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          x="215.42429"
          y="2700.8318"
@@ -478,14 +516,18 @@
        d="m 69.129488,2568.2817 c -47.54721,87.6729 -36.917782,175.3457 0.10653,263.0185"
        id="path4606-8-5-9-1-6-1"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="72.613632"
        y="2695.083"
        id="text6813-0-9-93-1-3-4"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          x="72.613632"
          y="2695.083"
@@ -501,14 +543,18 @@
        d="m 153.1752,2930.8173 c 12.06548,35.1092 22.9355,42.2106 31.6738,-0.6313"
        id="path4606-8-5-9-1-6-0"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="170.50734"
        y="2977.9487"
        id="text6813-0-9-93-1-3-5"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          x="170.50734"
          y="2977.9487"
@@ -529,14 +575,18 @@
        d="m 536.3047,2928.2812 c 12.06548,35.1091 22.9355,42.2106 31.6738,-0.6314"
        id="path4606-8-5-9-1-6-0-9"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="553.63684"
        y="2975.4126"
        id="text6813-0-9-93-1-3-5-4"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          x="553.63684"
          y="2975.4126"
@@ -544,7 +594,9 @@
          id="tspan6104-7-0-2-2">Jam &amp; Harvest</tspan></text>
     <g
        id="g4380"
-       transform="translate(0,2664)">
+       transform="translate(0,2664)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <ellipse
          style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd"
          id="ellipse4382"
@@ -589,7 +641,7 @@
            x="152.8129"
            y="158.35197"
            style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
-           id="tspan4410">NFC Encoder </tspan><tspan
+           id="tspan4410">NFC Decoder </tspan><tspan
            sodipodi:role="line"
            x="149.23135"
            y="186.47697"
@@ -867,7 +919,7 @@
            style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
            y="158.35197"
            x="152.8129"
-           sodipodi:role="line">NFC Encoder </tspan><tspan
+           sodipodi:role="line">NFC Decoder </tspan><tspan
            id="tspan4494"
            style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
            y="186.47697"
@@ -1145,7 +1197,7 @@
            x="152.8129"
            y="158.35197"
            style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
-           id="tspan5084">NFC Encoder </tspan><tspan
+           id="tspan5084">NFC Decoder </tspan><tspan
            sodipodi:role="line"
            x="149.23135"
            y="186.47697"
@@ -1423,7 +1475,7 @@
            style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
            y="158.35197"
            x="152.8129"
-           sodipodi:role="line">NFC Encoder </tspan><tspan
+           sodipodi:role="line">NFC Decoder </tspan><tspan
            id="tspan5250"
            style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
            y="186.47697"
@@ -1656,7 +1708,8 @@
        id="g5316"
        transform="translate(0,304)"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       inkscape:export-ydpi="90"
+       style="opacity:0.5">
       <ellipse
          style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd"
          id="ellipse5318"
@@ -1732,5 +1785,1150 @@
          id="tspan5560"
          x="-183.11984"
          y="2714.063">states</tspan></text>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:0.5;fill:#607b8b;fill-opacity:0.54117647"
+       transform="translate(792,44)"
+       id="g4482">
+      <ellipse
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd"
+         id="ellipse4484"
+         cx="150.45895"
+         cy="164.45538"
+         rx="99.281837"
+         ry="97.708267" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="149.23135"
+         y="158.35197"
+         id="text4486"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="152.8129"
+           y="158.35197"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+           id="tspan4488">NFC Decoder </tspan><tspan
+           sodipodi:role="line"
+           x="149.23135"
+           y="186.47697"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+           id="tspan4490">Active</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="g4492"
+       transform="translate(774,40)"
+       style="opacity:0.5">
+      <ellipse
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd"
+         id="ellipse4494"
+         cx="550.53314"
+         cy="168.47874"
+         rx="99.281837"
+         ry="97.708267" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="551.30554"
+         y="174.37532"
+         id="text4496"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="551.30554"
+           y="174.37532"
+           style="font-size:22.5px;text-align:center;text-anchor:middle"
+           id="tspan4498">Jam</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:0.5;fill:#607b8b;fill-opacity:0.54117647"
+       transform="translate(796,60)"
+       id="g4500">
+      <ellipse
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd"
+         id="ellipse4502"
+         cx="146.47214"
+         cy="413.9458"
+         rx="99.281837"
+         ry="97.708267" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="145.24454"
+         y="419.84238"
+         id="text4504"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="145.24454"
+           y="419.84238"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+           id="tspan4506">System Idle</tspan></text>
+    </g>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4508"
+       d="m 1039.6182,210.63597 184.7119,-0.88387"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       transform="matrix(0.85093229,-0.52527539,0.52527539,0.85093229,0,0)"
+       sodipodi:linespacing="125%"
+       id="text4510"
+       y="887.67511"
+       x="789.57501"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4512"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="887.67511"
+         x="789.57501"
+         sodipodi:role="line">Device Absent</tspan></text>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       transform="translate(774,304)"
+       id="g4557"
+       style="opacity:1;fill:#ff4005;fill-opacity:1">
+      <ellipse
+         ry="97.708267"
+         rx="99.281837"
+         cy="168.47874"
+         cx="550.53314"
+         id="ellipse4559"
+         style="fill:#e14005;fill-opacity:1;fill-rule:evenodd"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4561"
+         y="174.37532"
+         x="551.30554"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+         xml:space="preserve"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           id="tspan4563"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;"
+           y="174.37532"
+           x="551.30554"
+           sodipodi:role="line">No Power</tspan></text>
+    </g>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4514"
+       d="M 1254.4092,281.04318 1027.7364,421.32813"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4714)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4516"
+       y="168.70996"
+       x="1143.3228"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4518"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="168.70996"
+         x="1143.3228"
+         sodipodi:role="line">Malicious Intent</tspan><tspan
+         id="tspan4520"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="190.58496"
+         x="1143.3228"
+         sodipodi:role="line">Detected</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4522"
+       d="m 945.80757,376.25007 0.10653,-70.33186"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-2)" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4524"
+       d="M 1227.9819,478.0229 1043.27,477.1391"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5430)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4526"
+       y="470.66931"
+       x="1143.3228"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4528"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="470.66931"
+         x="1143.3228"
+         sodipodi:role="line">Boot</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4531"
+       y="340.83179"
+       x="989.42432"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4533"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="340.83179"
+         x="989.42432"
+         sodipodi:role="line">Device</tspan><tspan
+         id="tspan4535"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="362.70679"
+         x="989.42432"
+         sodipodi:role="line">Detected</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4537"
+       d="m 843.12949,208.28175 c -47.54721,87.67282 -36.91778,175.34565 0.10653,263.01845"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-2-4)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4539"
+       y="335.08307"
+       x="846.61365"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4541"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="335.08307"
+         x="846.61365"
+         sodipodi:role="line">Device</tspan><tspan
+         id="tspan4543"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="356.95807"
+         x="846.61365"
+         sodipodi:role="line">Absent</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4545"
+       d="m 927.1752,570.8173 c 12.06548,35.1092 22.9355,42.2106 31.6738,-0.6313"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-2-1)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4547"
+       y="617.94873"
+       x="944.50732"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4549"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="617.94873"
+         x="944.50732"
+         sodipodi:role="line">Sleep &amp; Harvest</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4551"
+       d="m 1310.3047,568.2812 c 12.0655,35.1091 22.9355,42.2106 31.6738,-0.6314"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4565)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4553"
+       y="615.4126"
+       x="1327.6368"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4555"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="615.4126"
+         x="1327.6368"
+         sodipodi:role="line">Jam &amp; Harvest</tspan></text>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="g4683"
+       transform="translate(802,604)"
+       style="opacity:0.5;fill:#607b8b;fill-opacity:0.54117647">
+      <ellipse
+         ry="97.708267"
+         rx="99.281837"
+         cy="164.45538"
+         cx="150.45895"
+         id="ellipse4685"
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4687"
+         y="158.35197"
+         x="149.23135"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4689"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+           y="158.35197"
+           x="152.8129"
+           sodipodi:role="line">NFC Decoder </tspan><tspan
+           id="tspan4691"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+           y="186.47697"
+           x="149.23135"
+           sodipodi:role="line">Active</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:0.5"
+       transform="translate(784,600)"
+       id="g4693">
+      <ellipse
+         ry="97.708267"
+         rx="99.281837"
+         cy="168.47874"
+         cx="550.53314"
+         id="ellipse4695"
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4697"
+         y="174.37532"
+         x="551.30554"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4699"
+           style="font-size:22.5px;text-align:center;text-anchor:middle"
+           y="174.37532"
+           x="551.30554"
+           sodipodi:role="line">Jam</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="g4701"
+       transform="translate(806,620)"
+       style="opacity:1;fill:#e14005;fill-opacity:1">
+      <ellipse
+         ry="97.708267"
+         rx="99.281837"
+         cy="413.9458"
+         cx="146.47214"
+         id="ellipse4703"
+         style="fill:#e14005;fill-opacity:1;fill-rule:evenodd"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4705"
+         y="419.84238"
+         x="145.24454"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+         xml:space="preserve"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           id="tspan4707"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;"
+           y="419.84238"
+           x="145.24454"
+           sodipodi:role="line">System Idle</tspan></text>
+    </g>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7)"
+       d="m 1049.6182,770.63597 184.7119,-0.88387"
+       id="path4709"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="503.93045"
+       y="1369.4493"
+       id="text4711"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.85093229,-0.52527539,0.52527539,0.85093229,0,0)"><tspan
+         sodipodi:role="line"
+         x="503.93045"
+         y="1369.4493"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4713">Device Absent</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4714)"
+       d="M 1264.4092,841.04318 1037.7364,981.32813"
+       id="path4715"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1153.3228"
+       y="728.70996"
+       id="text4717"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="1153.3228"
+         y="728.70996"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4719">Malicious Intent</tspan><tspan
+         sodipodi:role="line"
+         x="1153.3228"
+         y="750.58496"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4721">Detected</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-2)"
+       d="m 955.80757,936.25007 0.10653,-70.33186"
+       id="path4723"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-7)"
+       d="M 1237.9819,1038.0229 1053.27,1037.1391"
+       id="path4725"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1153.3228"
+       y="1030.6693"
+       id="text4727"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="1153.3228"
+         y="1030.6693"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4729">Boot</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="999.42432"
+       y="900.83179"
+       id="text4731"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="999.42432"
+         y="900.83179"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4733">Device</tspan><tspan
+         sodipodi:role="line"
+         x="999.42432"
+         y="922.70679"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4735">Detected</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-2-4)"
+       d="m 853.12949,768.28175 c -47.54721,87.67282 -36.91778,175.34565 0.10653,263.01845"
+       id="path4737"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="856.61365"
+       y="895.08307"
+       id="text4739"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="856.61365"
+         y="895.08307"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4741">Device</tspan><tspan
+         sodipodi:role="line"
+         x="856.61365"
+         y="916.95807"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4743">Absent</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-2-1)"
+       d="m 937.1752,1130.8173 c 12.06548,35.1092 22.9355,42.2106 31.6738,-0.6313"
+       id="path4745"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="954.50732"
+       y="1177.9487"
+       id="text4747"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="954.50732"
+         y="1177.9487"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4749">Sleep &amp; Harvest</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-2-1-4)"
+       d="m 1320.3047,1128.2812 c 12.0655,35.1091 22.9355,42.2106 31.6738,-0.6314"
+       id="path4751"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1337.6367"
+       y="1175.4126"
+       id="text4753"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="1337.6367"
+         y="1175.4126"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4755">Jam &amp; Harvest</tspan></text>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="g4757"
+       transform="translate(784,864)">
+      <ellipse
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd"
+         id="ellipse4759"
+         cx="550.53314"
+         cy="168.47874"
+         rx="99.281837"
+         ry="97.708267" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="551.30554"
+         y="174.37532"
+         id="text4761"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="551.30554"
+           y="174.37532"
+           style="font-size:22.5px;text-align:center;text-anchor:middle"
+           id="tspan4763">No Power</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:0.5;fill:#607b8b;fill-opacity:0.54117647"
+       transform="translate(784,1184)"
+       id="g4765" />
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:1;fill:#e14005;fill-opacity:1"
+       transform="translate(818,1184)"
+       id="g4847">
+      <ellipse
+         style="fill:#e14005;fill-opacity:1;fill-rule:evenodd"
+         id="ellipse4849"
+         cx="150.45895"
+         cy="164.45538"
+         rx="99.281837"
+         ry="97.708267"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0.92156863;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+         x="149.23135"
+         y="158.35197"
+         id="text4851"
+         sodipodi:linespacing="125%"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           sodipodi:role="line"
+           x="152.8129"
+           y="158.35197"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:0.92156863;"
+           id="tspan4853">NFC Decoder </tspan><tspan
+           sodipodi:role="line"
+           x="149.23135"
+           y="186.47697"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:0.92156863;"
+           id="tspan4855">Active</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="g4857"
+       transform="translate(800,1180)"
+       style="opacity:0.5">
+      <ellipse
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd"
+         id="ellipse4859"
+         cx="550.53314"
+         cy="168.47874"
+         rx="99.281837"
+         ry="97.708267" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="551.30554"
+         y="174.37532"
+         id="text4861"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="551.30554"
+           y="174.37532"
+           style="font-size:22.5px;text-align:center;text-anchor:middle"
+           id="tspan4863">Jam</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:1;fill:#607b8b;fill-opacity:0.54117647"
+       transform="translate(822,1200)"
+       id="g4865">
+      <ellipse
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd"
+         id="ellipse4867"
+         cx="146.47214"
+         cy="413.9458"
+         rx="99.281837"
+         ry="97.708267" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="145.24454"
+         y="419.84238"
+         id="text4869"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="145.24454"
+           y="419.84238"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+           id="tspan4871">System Idle</tspan></text>
+    </g>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4873"
+       d="m 1065.6182,1350.636 184.7119,-0.8839"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4978)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       transform="matrix(0.85093229,-0.52527539,0.52527539,0.85093229,0,0)"
+       sodipodi:linespacing="125%"
+       id="text4875"
+       y="1871.3942"
+       x="212.8858"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4877"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="1871.3942"
+         x="212.8858"
+         sodipodi:role="line">Device Absent</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4879"
+       d="m 1280.4092,1421.0432 -226.6728,140.2849"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4884)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4881"
+       y="1308.71"
+       x="1169.3228"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4883"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="1308.71"
+         x="1169.3228"
+         sodipodi:role="line">Malicious Intent</tspan><tspan
+         id="tspan4885"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="1330.585"
+         x="1169.3228"
+         sodipodi:role="line">Detected</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4887"
+       d="m 971.80757,1516.2501 0.10653,-70.3319"
+       style="opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4638)" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4889"
+       d="M 1253.9819,1618.0229 1069.27,1617.1391"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-7)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4891"
+       y="1610.6693"
+       x="1169.3228"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4893"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="1610.6693"
+         x="1169.3228"
+         sodipodi:role="line">Boot</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4895"
+       y="1480.8318"
+       x="1015.4243"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4897"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="1480.8318"
+         x="1015.4243"
+         sodipodi:role="line">Device</tspan><tspan
+         id="tspan4899"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="1502.7068"
+         x="1015.4243"
+         sodipodi:role="line">Detected</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4901"
+       d="m 869.12949,1348.2818 c -47.54721,87.6728 -36.91778,175.3456 0.10653,263.0184"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4796)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4903"
+       y="1475.0831"
+       x="872.61365"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4905"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="1475.0831"
+         x="872.61365"
+         sodipodi:role="line">Device</tspan><tspan
+         id="tspan4907"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="1496.9581"
+         x="872.61365"
+         sodipodi:role="line">Absent</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4909"
+       d="m 953.1752,1710.8173 c 12.06548,35.1092 22.9355,42.2106 31.6738,-0.6313"
+       style="opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4568)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4911"
+       y="1757.9487"
+       x="970.50732"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4913"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="1757.9487"
+         x="970.50732"
+         sodipodi:role="line">Sleep &amp; Harvest</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4915"
+       d="m 1336.3047,1708.2812 c 12.0655,35.1091 22.9355,42.2106 31.6738,-0.6314"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-2-1-4)" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       sodipodi:linespacing="125%"
+       id="text4917"
+       y="1755.4126"
+       x="1353.6368"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4919"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         y="1755.4126"
+         x="1353.6368"
+         sodipodi:role="line">Jam &amp; Harvest</tspan></text>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       transform="translate(800,1444)"
+       id="g4921">
+      <ellipse
+         ry="97.708267"
+         rx="99.281837"
+         cy="168.47874"
+         cx="550.53314"
+         id="ellipse4923"
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4925"
+         y="174.37532"
+         x="551.30554"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4927"
+           style="font-size:22.5px;text-align:center;text-anchor:middle"
+           y="174.37532"
+           x="551.30554"
+           sodipodi:role="line">No Power</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="g4929"
+       transform="translate(838,1764)"
+       style="opacity:1;fill:#607b8b;fill-opacity:0.54117647">
+      <ellipse
+         ry="97.708267"
+         rx="99.281837"
+         cy="164.45538"
+         cx="150.45895"
+         id="ellipse4931"
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4933"
+         y="158.35197"
+         x="149.23135"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4935"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+           y="158.35197"
+           x="152.8129"
+           sodipodi:role="line">NFC Decoder </tspan><tspan
+           id="tspan4937"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+           y="186.47697"
+           x="149.23135"
+           sodipodi:role="line">Active</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:1;fill:#e14005;fill-opacity:1"
+       transform="translate(820,1760)"
+       id="g4939">
+      <ellipse
+         ry="97.708267"
+         rx="99.281837"
+         cy="168.47874"
+         cx="550.53314"
+         id="ellipse4941"
+         style="fill:#e14005;fill-opacity:1;fill-rule:evenodd"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4943"
+         y="174.37532"
+         x="551.30554"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0.96470588;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+         xml:space="preserve"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           id="tspan4945"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:0.96470588;"
+           y="174.37532"
+           x="551.30554"
+           sodipodi:role="line">Jam</tspan></text>
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot5011"
+         style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:35px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+           id="flowRegion5013"><rect
+             id="rect5015"
+             width="928"
+             height="660"
+             x="771"
+             y="1788.3622" /></flowRegion><flowPara
+           id="flowPara5017"></flowPara></flowRoot>    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="g4947"
+       transform="translate(842,1780)"
+       style="opacity:1;fill:#607b8b;fill-opacity:0.54117647">
+      <ellipse
+         ry="97.708267"
+         rx="99.281837"
+         cy="413.9458"
+         cx="146.47214"
+         id="ellipse4949"
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4951"
+         y="419.84238"
+         x="145.24454"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4953"
+           style="font-size:22.5px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+           y="419.84238"
+           x="145.24454"
+           sodipodi:role="line">System Idle</tspan></text>
+    </g>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4978)"
+       d="m 1085.6182,1930.636 184.7119,-0.8839"
+       id="path4955"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-74.755028"
+       y="2375.4421"
+       id="text4957"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.85093229,-0.52527539,0.52527539,0.85093229,0,0)"><tspan
+         sodipodi:role="line"
+         x="-74.755028"
+         y="2375.4421"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4959">Device Absent</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:0;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4884)"
+       d="m 1300.4092,2001.0432 -226.6728,140.2849"
+       id="path4961"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1189.3228"
+       y="1888.71"
+       id="text4963"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="1189.3228"
+         y="1888.71"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4965">Malicious Intent</tspan><tspan
+         sodipodi:role="line"
+         x="1189.3228"
+         y="1910.585"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4967">Detected</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4638)"
+       d="m 991.80757,2096.2501 0.10653,-70.3319"
+       id="path4969"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-7)"
+       d="M 1273.9819,2198.0229 1089.27,2197.1391"
+       id="path4971"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1189.3228"
+       y="2190.6694"
+       id="text4973"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="1189.3228"
+         y="2190.6694"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4975">Boot</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1035.4243"
+       y="2060.8318"
+       id="text4977"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="1035.4243"
+         y="2060.8318"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4979">Device</tspan><tspan
+         sodipodi:role="line"
+         x="1035.4243"
+         y="2082.7068"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4981">Detected</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4796)"
+       d="m 889.12949,1928.2818 c -47.54721,87.6728 -36.91778,175.3456 0.10653,263.0184"
+       id="path4983"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="892.61365"
+       y="2055.083"
+       id="text4985"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="892.61365"
+         y="2055.083"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4987">Device</tspan><tspan
+         sodipodi:role="line"
+         x="892.61365"
+         y="2076.958"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4989">Absent</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4568)"
+       d="m 973.1752,2290.8173 c 12.06548,35.1092 22.9355,42.2106 31.6738,-0.6313"
+       id="path4991"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="990.50732"
+       y="2337.9487"
+       id="text4993"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="990.50732"
+         y="2337.9487"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan4995">Sleep &amp; Harvest</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3-4-9-7-2-1-4)"
+       d="m 1356.3047,2288.2812 c 12.0655,35.1091 22.9355,42.2106 31.6738,-0.6314"
+       id="path4997"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1373.6367"
+       y="2335.4126"
+       id="text4999"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="1373.6367"
+         y="2335.4126"
+         style="font-size:17.5px;text-align:center;text-anchor:middle"
+         id="tspan5001">Jam &amp; Harvest</tspan></text>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="g5003"
+       transform="translate(820,2024)">
+      <ellipse
+         style="fill:#607b8b;fill-opacity:0.54117647;fill-rule:evenodd"
+         id="ellipse5005"
+         cx="550.53314"
+         cy="168.47874"
+         rx="99.281837"
+         ry="97.708267" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="551.30554"
+         y="174.37532"
+         id="text5007"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="551.30554"
+           y="174.37532"
+           style="font-size:22.5px;text-align:center;text-anchor:middle"
+           id="tspan5009">No Power</tspan></text>
+    </g>
   </g>
 </svg>

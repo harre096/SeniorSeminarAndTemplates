@@ -859,36 +859,31 @@
 
 
 
+% \begin{center}\textcolor{uipoppy}{We will describe each mode as we go}\end{center}\vspace{3mm}
 \begin{frame}
 \frametitle{EnGarde State Diagram}
 \begin{center}
-  \begin{center}\textcolor{uipoppy}{We will describe each mode as we go}\end{center}\vspace{3mm}
-  \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states0.png}
-  \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states1.png}%%we'll start with No Power (flip)
+  \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states1.png}
+  \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states1a.png}%%we'll start with No Power (flip)
 \end{center}
 \end{frame}
 
 
-\subsection{No Power Mode}
+\subsection{No Power}
 \begin{frame}
 \frametitle{EnGarde State: No Power}
   \begin{center}
   \begin{minipage}{.9\textwidth}
   \begin{block}{No Power}
     \begin{itemize}
-      \item{Commercial payments systems are bringing NFC to phones}
+      \item{EnGarde has its own battery independent from the phone, therefore it can encounter a No Power state}
       \pause
       \vspace{1mm}
-      \item{As a result, there may be new risks in both payment and non-payment applications of NFC}
+      \item{To maintain a charge, EnGarde harvests power from NFC communication}
       \pause
       \vspace{1mm}
-      \item{EnGarde is a semi-permanent phone attachment, designed to act as a hardware-based firewall}
+      \item{Even if EnGarde is completely dead, it will fail safely}
       \pause
-      \vspace{1mm}
-      \item{EnGarde's logic is independent from phone OS, and can be updated to combat current and future threats}
-      \pause
-      \vspace{1mm}
-      \item{Gummeson et al's work on the EnGarde prototype is the focus of this section}
     \end{itemize}
   \end{block}
   \end{minipage}
@@ -900,29 +895,107 @@
 \begin{frame}
 \frametitle{EnGarde State Diagram}
 \begin{center}
-  \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states2.png}
+  \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states2.png}
+  \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states2a.png}%%we'll start with No Power (flip)
 \end{center}
 \end{frame}
 
-\subsection{NFC Decoder Active Mode}
+
+\subsection{System Idle}
+\begin{frame}
+\frametitle{EnGarde State: System Idle}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+  \begin{block}{System Idle}
+    \begin{itemize}
+      \item{EnGarde maintains charge}
+      \pause
+      \vspace{1mm}
+      \item{EnGarde waits}
+    \end{itemize}
+  \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{EnGarde State Diagram}
+\begin{center}
+  \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states3.png}
+  \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states3a.png}%%we'll start with No Power (flip)
+\end{center}
+\end{frame}
+
+
+
+\subsection{NFC Decoder Active}
+\begin{frame}
+\frametitle{EnGarde State: Decoder Active}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+  \begin{block}{NFC Decoder Active}
+    \begin{itemize}
+      \item{There is an incoming or outgoing transmission. EnGarde must listen...}
+      \pause
+      \vspace{1mm}
+      \item{EnGarde scans transmissions and determines if they are worthy using a set of blocking rules}
+      \pause
+      \vspace{1mm}
+      \item{The blocking rules can be updated for robust handling of current and future attacks}
+    \end{itemize}
+  \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
 
 
 
 \begin{frame}
 \frametitle{EnGarde State Diagram}
 \begin{center}
-  \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states3.png}%%show at end of decode
+  \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states4.png}
+  \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states4a.png}%%we'll start with No Power (flip)
 \end{center}
 \end{frame}
 
 \subsection{Jam Mode}
 \begin{frame}
-\frametitle{EnGarde State Diagram}
-\begin{center}
-  \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states4.png}
-\end{center}
+\frametitle{EnGarde State: Jammer}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+  \begin{block}{Reflective Jamming}
+    \begin{itemize}
+      \item{This jamming method is used against low-powered tags}
+      \pause
+      \vspace{1mm}
+      \item{By broadcasting on the same frequency, EnGarde can block out messages from malicious tags}
+      \pause
+      \vspace{1mm}
+      \item{The power the phone is using to activate the tags also powers EnGarde's defense}
+    \end{itemize}
+  \end{block}
+  \end{minipage}
+  \end{center}
 \end{frame}
 
+\begin{frame}
+\frametitle{EnGarde State: Jammer}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+  \begin{block}{Pulse Jamming}
+    \begin{itemize}
+      \item{This jamming method is used against high-powered readers or peers}
+      \pause
+      \vspace{1mm}
+      \item{Since a reader is sourcing a considerable amount of power, Engarde can only corrupt rather than completely block messages}
+      \pause
+      \vspace{1mm}
+      \item{The power from the reader sustains EnGarde's defense}
+    \end{itemize}
+  \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
 
 
 \begin{frame}
@@ -934,6 +1007,24 @@
 
 \subsection{Experimental Evaluation of EnGarde}
 
+\begin{frame}
+\frametitle{Experimental Evaluation of EnGarde}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+  \begin{block}{Jamming}
+    \begin{itemize}
+      \item{EnGarde was able to successfully block all malicious test cases using one of the jamming methods}
+      \pause
+      \vspace{1mm}
+      \item{Decoding was also successful in decoding a malicious tag to URL \textit{http://malware}}
+      \pause
+      \vspace{1mm}
+      \item{EnGarde's defense seems strong, but we note that its defense is only as strong as the blocking rules it has}
+    \end{itemize}
+  \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
 
 %-------------------------------------------------------------------
 %                           Section
@@ -946,6 +1037,26 @@
 \end{frame}
 %
 %-------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Conclusion}
+  \begin{center}
+  \begin{minipage}{.9\textwidth}
+  \begin{block}{Conclusion}
+    \begin{itemize}
+      \item{If we are clever, we can have secure contactless credit cards}
+      \pause
+      \vspace{1mm}
+      \item{NCF ticking is a viable option for the future, but NFC data transfer speeds need improvement}
+      \pause
+      \vspace{1mm}
+      \item{EnGarde's defense seems strong, but we note that its defense is only as strong as the blocking rules it has}
+    \end{itemize}
+  \end{block}
+  \end{minipage}
+  \end{center}
+\end{frame}
+
 \begin{frame}
   \frametitle{Conclusion}
   \begin{block}{Tinfoil Hats for Everyone!}
