@@ -345,7 +345,7 @@
 \frametitle{Phones can communicate peer-to-peer}
   \begin{center}
   \begin{minipage}{.7\textwidth}
-  \begin{block}{\circled{3}~~Phones can emulate tags}\centering
+  \begin{block}{\circled{3}~~Phones can communicate as peers}\centering
       \includegraphics[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/peer.jpg}
       \begin{itemize}
   		  \item{Phones take turns switching between reader and tag-emulation mode}
@@ -396,7 +396,7 @@
     \begin{itemize}
       \item{Some credit cards contain passive NFC tags}
       \pause
-      \item{We focus on Jensen, Gouda, and Qiu's work on securing such cards in this section}
+      \item{We focus on Jensen, Gouda, and Qiu's [1] work on securing such cards in this section}
       \pause
       \item{Security solutions must be computationally inexpensive to run on passive tags}
     \end{itemize}
@@ -486,8 +486,9 @@
                 \end{itemize}
               \end{block}
               \begin{center}
-                \includegraphics<1>[width=.7\linewidth,height=\textheight,keepaspectratio]{figures/CCeaves0.png}
-                \includegraphics<2->[width=.7\linewidth,height=\textheight,keepaspectratio]{figures/CCeaves.png}
+                \vspace{-6mm}
+                \includegraphics<1>[width=\linewidth,height=\textheight,keepaspectratio]{figures/CCeaves0.png}
+                \includegraphics<2->[width=\linewidth,height=\textheight,keepaspectratio]{figures/CCeaves.png}
               \end{center}
      \end{minipage}
   \textref{Photo of eavesdropper from Flicker}
@@ -622,7 +623,7 @@
       \item{Three Nokia reseachers investigate NFC phone based ticketing}
       \pause
       \vspace{1mm}
-      \item{Tamrakar, Ekberg, and Asokan's work is the focus of this section}
+      \item{Tamrakar, Ekberg, and Asokan's [2] work is the focus of this section}
       \pause
       \vspace{1mm}
       \item{Their goal is to build a secure ticketing scheme while keeping transaction time below the 300ms industry standard}
@@ -822,7 +823,7 @@
       \item{EnGarde's logic is independent from phone OS, and can be updated to combat current and future threats}
       \pause
       \vspace{1mm}
-      \item{Gummeson et al's work on the EnGarde prototype is the focus of this section}
+      \item{Gummeson et al's [3] work on the EnGarde prototype is the focus of this section}
     \end{itemize}
   \end{block}
   \end{minipage}
@@ -1016,7 +1017,7 @@
       \item{EnGarde was able to successfully block all malicious test cases using one of the jamming methods}
       \pause
       \vspace{1mm}
-      \item{Decoding was also successful in decoding a malicious tag to URL \textit{http://malware}}
+      \item{Decoding was also successful in decoding a malicious tag to URL \textit{http://www.malware}}
       \pause
       \vspace{1mm}
       \item{EnGarde's defense seems strong, but we note that its defense is only as strong as the blocking rules it has}
@@ -1058,9 +1059,16 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Conclusion}
-  \begin{block}{Tinfoil Hats for Everyone!}
-  \end{block}
+  \frametitle{Questions}
+  \begin{center}
+    {\huge \textcolor{uipoppy}{Questions?}}\\*
+    %\includegraphics[width=.2\linewidth,height=.2\textheight,keepaspectratio]{figures/tinfoil.png}\\*
+    %\textcolor{uipaleblue}{Tinfoil Hats for Everyone!}\\*
+      % \begin{minipage}{.6\textwidth}
+        \vspace{.7cm}
+        \textcolor{uipaleblue}{\textit{Stop by the NFC enabled pop machine near the bookstore for a neat demonstration.}}
+      % \end{minipage}
+\end{center}
 \end{frame}
 
 \begin{frame}
