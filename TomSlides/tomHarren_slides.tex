@@ -132,23 +132,31 @@
 %-------------------------------------------------------------------
 
 
-\subsection{Elements of HF RFID: Tags \& Readers}
+\subsection{Elements of RFID: Tags \& Readers}
 \begin{frame}
-  \frametitle{Introduction to HF-RFID}
+  \frametitle{Introduction to RFID}
     \begin{center}\begin{minipage}{.9\textwidth}
       \begin{itemize}
-        \item{NFC is built using elements of \textit{high-frequency radio frequency identification} (HF RFID)}\newline
+        \item{NFC is based on \textit{radio frequency identification} (RFID) technology}
 
-        \begin{minipage}{.9\textwidth}\centering
-          \vspace{5mm}
-          \includegraphics<1>[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/rfid.png}
-          \includegraphics<2->[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/rfidFade.png}
-        \end{minipage}
-        \vspace{5mm}
-        \item<3->{Range depends on frequency, size of antenna, power, and interference}
-        \item<4->{Communication happens between tags and readers}
+        % \begin{minipage}{.9\textwidth}\centering
+        %   \vspace{5mm}
+        %   \includegraphics<1>[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/rfid.png}
+        %   \includegraphics<2->[width=\linewidth,height=0.2\textheight,keepaspectratio]{figures/rfidFade.png}
+        % \end{minipage}
+        % \vspace{5mm}
+        \begin{center}
+          %  \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/FasTrak_transponder.jpg}
+           \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/shipping.jpg}
+           \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/Microchip_rfid_rice.jpg}
+        \end{center}
+        \pause
+        \item{Range depends on frequency, size of antenna, power, and interference}
+        \pause
+        \item{Communication happens between tags and readers}
       \end{itemize}
     \end{minipage}\end{center}
+    %  \textref{Images from Wikipedia 'RFID' and 'Intermodal Container' pages}
 \end{frame}
 
 
@@ -209,7 +217,7 @@
     \end{column}
     \begin{column}{.5\textwidth}
       \vspace{4mm}
-     \begin{block}{HF-RFID Communication}
+     \begin{block}{RFID Communication}
 		\begin{enumerate}
         \pause
 		    \item{Reader emits electricity}
@@ -294,7 +302,7 @@
 \frametitle{NFC on Mobile Phones}
   \begin{center}
   \begin{minipage}{.7\textwidth}
-  \begin{block}{NFC extends HF RFID:}
+  \begin{block}{NFC extends RFID:}
 		\begin{enumerate}
 		  \item{Phones can act as readers}
 		  \item{Phones can emulate tags}
@@ -704,9 +712,10 @@
 \begin{frame}
 \frametitle{Protocol Variant 2}
   \begin{center}
-    \begin{block}{Use a reversed hash chain}
+    \begin{block}{Use small, timely tokens AND a long-term certificate}
       \begin{itemize}
-        \item{Offers timely tokens to be used with a long term certificate}
+        \pause
+        \item{This is implemented using a reverse hash chain}
       \end{itemize}
     \end{block}
     \includegraphics[width=.8\linewidth,height=.8\textheight,keepaspectratio]{figures/ticketing/protocol60.png}
@@ -758,7 +767,7 @@
       \begin{itemize}
         \item<2->{NFC transfer speeds were the biggest bottleneck}
         \item<3->{The authors noted that smaller two key sizes have been deprecated in the payment industry}
-        \item<5->{After taking the 300ms goal into account, only two options are viable}
+        \item<5->{The industry recommended transaction time is 300ms. After taking this into account, only two options are viable}
       \end{itemize}
     \end{block}
   \end{minipage}
@@ -782,7 +791,7 @@
                 %  \end{enumerate}
         \pause
         \vspace{1mm}
-        \item{The authors state that these protocols are meets performance and security needs better than the current contactless card system}
+        \item{The researchers state that these protocols are meets performance and security needs better than the current contactless card system}
         \pause
         \vspace{1mm}
         \item{While mobile ticketing is an imperfect, it is valid path forward that offers value}
