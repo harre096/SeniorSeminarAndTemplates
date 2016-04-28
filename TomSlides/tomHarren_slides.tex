@@ -824,9 +824,6 @@
       \item{EnGarde is a semi-permanent phone attachment, designed to act as a hardware-based firewall}
       \pause
       \vspace{1mm}
-      \item{EnGarde's logic is independent from phone OS, and can be updated to combat current and future threats}
-      \pause
-      \vspace{1mm}
       \item{Gummeson et al's [3] work on the EnGarde prototype is the focus of this section}
     \end{itemize}
   \end{block}
@@ -834,6 +831,28 @@
   \end{center}
 \end{frame}
 
+\subsection{The Engarde Protoype}
+\begin{frame}
+\frametitle{EnGarde Prototype}
+\begin{center}
+   \includegraphics[width=.5\linewidth,height=\textheight,keepaspectratio]{figures/engarde/engarde.jpg}\\*
+
+   \begin{minipage}{.9\textwidth}
+     \vspace{3mm}
+     \pause
+   \begin{block}{EnGarde Prototype Features}
+     \begin{itemize}
+       \pause
+       \item{Small form factor for semi-permanent mounting to a mobile phone}
+       \pause
+       \item{Independent battery, memory, and processor from phone}
+       \pause
+       \item{Software can be updated to combat current and future threats}
+     \end{itemize}
+   \end{block}
+   \end{minipage}
+\end{center}
+\end{frame}
 
 \begin{frame}
 \frametitle{EnGarde Expectations}
@@ -864,39 +883,21 @@
 
 
 
-% \begin{center}\textcolor{uipoppy}{We will describe each mode as we go}\end{center}\vspace{3mm}
-% \begin{frame}
-% \frametitle{EnGarde State Diagram}
-% \begin{center}
-%   \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states1.png}
-%   \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states1a.png}%%we'll start with No Power (flip)
-% \end{center}
-% \end{frame}
-
-
-\begin{frame}
-\frametitle{EnGarde Prototype}
-\begin{center}
-   \includegraphics[width=.5\linewidth,height=\textheight,keepaspectratio]{figures/engarde/engarde.jpg}
-\end{center}
-\end{frame}
-
 
 \subsection{Power Harvesting}
 \begin{frame}
 \frametitle{Power Harvesting}
   \begin{center}
   \begin{minipage}{.9\textwidth}
-  \begin{block}{No Power}
+  \begin{block}{Power Harvesting}
     \begin{itemize}
-      \item{EnGarde has its own battery independent from the phone, therefore it can encounter a No Power state}
+      \item{EnGarde has a battery independent from the phone, and maintains charge by harvesting power from NFC communication}
       \pause
       \vspace{1mm}
-      \item{To maintain a charge, EnGarde harvests power from NFC communication}
+      \item{Since EnGarde has its own battery, it can encounter a no-power state}
       \pause
       \vspace{1mm}
       \item{Even if EnGarde is completely dead, it will fail safely}
-      \pause
     \end{itemize}
   \end{block}
   \end{minipage}
@@ -905,50 +906,49 @@
 
 
 
-\begin{frame}
-\frametitle{EnGarde State Diagram}
-\begin{center}
-  \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states2.png}
-  \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states2a.png}%%we'll start with No Power (flip)
-\end{center}
-\end{frame}
+% \begin{frame}
+% \frametitle{EnGarde State Diagram}
+% \begin{center}
+%   \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states2.png}
+%   \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states2a.png}%%we'll start with No Power (flip)
+% \end{center}
+% \end{frame}
 
 
-\subsection{System Idle}
+
+% \begin{frame}
+% \frametitle{EnGarde State: System Idle}
+%   \begin{center}
+%   \begin{minipage}{.9\textwidth}
+%   \begin{block}{System Idle}
+%     \begin{itemize}
+%       \item{EnGarde maintains charge}
+%       \pause
+%       \vspace{1mm}
+%       \item{EnGarde waits}
+%     \end{itemize}
+%   \end{block}
+%   \end{minipage}
+%   \end{center}
+% \end{frame}
+
+% \begin{frame}
+% \frametitle{EnGarde State Diagram}
+% \begin{center}
+%   \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states3.png}
+%   \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states3a.png}%%we'll start with No Power (flip)
+% \end{center}
+% \end{frame}
+
+
+\subsection{NFC Decoding}
 \begin{frame}
-\frametitle{EnGarde State: System Idle}
+\frametitle{NFC Decoding}
   \begin{center}
   \begin{minipage}{.9\textwidth}
-  \begin{block}{System Idle}
+  \begin{block}{NFC Decoder}
     \begin{itemize}
-      \item{EnGarde maintains charge}
-      \pause
-      \vspace{1mm}
-      \item{EnGarde waits}
-    \end{itemize}
-  \end{block}
-  \end{minipage}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{EnGarde State Diagram}
-\begin{center}
-  \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states3.png}
-  \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states3a.png}%%we'll start with No Power (flip)
-\end{center}
-\end{frame}
-
-
-
-\subsection{NFC Decoder Active}
-\begin{frame}
-\frametitle{EnGarde State: Decoder Active}
-  \begin{center}
-  \begin{minipage}{.9\textwidth}
-  \begin{block}{NFC Decoder Active}
-    \begin{itemize}
-      \item{There is an incoming or outgoing transmission. EnGarde must listen...}
+      \item{When there is an incoming or outgoing transmission, EnGarde will listen in}
       \pause
       \vspace{1mm}
       \item{EnGarde scans transmissions and determines if they are worthy using a set of blocking rules}
@@ -963,17 +963,17 @@
 
 
 
-\begin{frame}
-\frametitle{EnGarde State Diagram}
-\begin{center}
-  \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states4.png}
-  \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states4a.png}%%we'll start with No Power (flip)
-\end{center}
-\end{frame}
+% \begin{frame}
+% \frametitle{EnGarde State Diagram}
+% \begin{center}
+%   \includegraphics<1>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states4.png}
+%   \includegraphics<2>[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states4a.png}%%we'll start with No Power (flip)
+% \end{center}
+% \end{frame}
 
-\subsection{Jam Mode}
+\subsection{Jamming Communications}
 \begin{frame}
-\frametitle{EnGarde State: Jammer}
+\frametitle{Jamming Communications}
   \begin{center}
   \begin{minipage}{.9\textwidth}
   \begin{block}{Reflective Jamming}
@@ -992,7 +992,7 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{EnGarde State: Jammer}
+\frametitle{Jamming Communications}
   \begin{center}
   \begin{minipage}{.9\textwidth}
   \begin{block}{Pulse Jamming}
@@ -1011,14 +1011,14 @@
 \end{frame}
 
 
-\begin{frame}
-\frametitle{EnGarde State Diagram}
-\begin{center}
-  \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states5.png}
-\end{center}
-\end{frame}
+% \begin{frame}
+% \frametitle{EnGarde State Diagram}
+% \begin{center}
+%   \includegraphics[width=.8\linewidth,height=.7\textheight,keepaspectratio]{figures/engarde/states5.png}
+% \end{center}
+% \end{frame}
 
-\subsection{Experimental Evaluation of EnGarde}
+\subsection{Experimental Evaluation}
 
 \begin{frame}
 \frametitle{Experimental Evaluation of EnGarde}
@@ -1029,7 +1029,7 @@
       \item{EnGarde was able to successfully block all malicious test cases using one of the jamming methods}
       \pause
       \vspace{1mm}
-      \item{Decoding was also successful in decoding a malicious tag to URL \textit{http://www.malware}}
+      \item{Decoding was also successful in decoding a malicious tag to the URL \textit{http://www.malware}}
       \pause
       \vspace{1mm}
       \item{EnGarde's defense seems strong, but we note that its defense is only as strong as the blocking rules it has}
@@ -1106,7 +1106,7 @@
     \begin{itemize}
       \item{Personal photos
       }
-      \item{Wikipedia}
+      \item{Wikipedia Articles: Near Field Communication, Radio-frequency identification, Card Security Code, Intermodal Container}
       \item{Robert Hardy, Enrico Rukzio, Paul Holleis, and Matthias Wagner. 2010. Mobile interaction with static and dynamic NFC-based displays. In Proceedings of the 12th international conference on Human computer interaction with mobile devices and services (MobileHCI '10). ACM, New York, NY, USA, 123-132. %DOI=http://dx.doi.org.ezproxy.morris.umn.edu/10.1145/1851600.1851623
       }
     \end{itemize}
