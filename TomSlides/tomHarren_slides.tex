@@ -80,11 +80,11 @@
 \frametitle{Have you used NFC?}
   		\begin{block}{}
   		  \begin{center}
-    		\includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/wikimediatag.jpg}
-    		\includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/gayHall.jpg}
-        \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/ApplePay.jpg}
-        \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/peer.jpg}
-        \includegraphics[width=\linewidth,height=0.3\textheight,keepaspectratio]{figures/higbies.jpg}
+    		\includegraphics[width=\linewidth,height=0.27\textheight,keepaspectratio]{figures/wikimediatag.jpg}
+    		\includegraphics[width=\linewidth,height=0.27\textheight,keepaspectratio]{figures/gayHall.jpg}
+        \includegraphics[width=\linewidth,height=0.27\textheight,keepaspectratio]{figures/androidPay.png}
+        \includegraphics[width=\linewidth,height=0.27\textheight,keepaspectratio]{figures/peer.jpg}
+        \includegraphics[width=\linewidth,height=0.27\textheight,keepaspectratio]{figures/higbies.jpg}
       \end{center}
     \end{block}
     \textref{Note: The communication standard used in UCard was not verified}
@@ -341,7 +341,7 @@
   \begin{center}
   \begin{minipage}{.7\textwidth}
   \begin{block}{\circled{2}~~Phones can emulate tags}\centering
-      \includegraphics[width=\linewidth,height=0.4\textheight,keepaspectratio]{figures/ApplePay.jpg}
+      \includegraphics[width=\linewidth,height=0.4\textheight,keepaspectratio]{figures/androidPay.png}
       \begin{itemize}
   		  \item{Phones acts as if it were a passive tag}
         \pause
@@ -350,7 +350,7 @@
   \end{block}
   \end{minipage}
   \end{center}
-  \textref{Image Note: Thank you Angela}
+  \textref{Image Note: Thank you Evan}
 \end{frame}
 
 \begin{frame}
@@ -544,7 +544,10 @@
 \frametitle{Proposed Secure Credit Protocol}
  \begin{center}
    \vspace{-8mm}
-   \includegraphics[width=\linewidth,height=.3\textheight,keepaspectratio]{../TomPaper/figures/CCnew.png}
+   \includegraphics<1>[width=\linewidth,height=.3\textheight,keepaspectratio]{../TomPaper/figures/CCnew.png}
+   \includegraphics<2>[width=\linewidth,height=.3\textheight,keepaspectratio]{figures/CCnew1.png}
+   \includegraphics<3>[width=\linewidth,height=.3\textheight,keepaspectratio]{figures/CCnew2.png}
+   \includegraphics<4>[width=\linewidth,height=.3\textheight,keepaspectratio]{figures/CCnew3.png}
  \end{center}
  \vspace{-6mm}
     \begin{minipage}[t][25mm][t]{\textwidth}
@@ -576,8 +579,7 @@
             \item{Card information is sent to the indicated bank}
           \end{itemize}
         \end{block}
-      }
-      \only<5>{
+
         \begin{block}{Authorization}
           \begin{itemize}
             \item{Bank verifies transaction}
