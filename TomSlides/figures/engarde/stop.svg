@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="stop.svg"
+   inkscape:export-filename="/home/tom/stop.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="391.77128"
+     inkscape:cy="316.86467"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="520"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#ff0004;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4136"
+       sodipodi:sides="8"
+       sodipodi:cx="404.28571"
+       sodipodi:cy="448.07648"
+       sodipodi:r1="236.02577"
+       sodipodi:r2="118.01288"
+       sodipodi:arg1="0.51238946"
+       sodipodi:arg2="0.90508854"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 609.99999,563.79076 467.92532,675.3608 288.57142,653.79077 177.00138,511.71609 l 21.57004,-179.3539 142.07467,-111.57004 179.3539,21.57004 111.57004,142.07468 z"
+       transform="matrix(0.99118366,-0.13249513,0.13249513,0.99118366,-55.803631,57.516285)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:45.79760361px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="228.5882"
+       y="470.73724"
+       id="text4138"
+       sodipodi:linespacing="125%"
+       transform="scale(0.95555758,1.0465094)"><tspan
+         sodipodi:role="line"
+         id="tspan4140"
+         x="228.5882"
+         y="470.73724"
+         style="font-size:147.20658875px;fill:#ffffff">STOP</tspan></text>
+    <text
+       transform="scale(0.9132671,1.0949699)"
+       sodipodi:linespacing="125%"
+       id="text4163"
+       y="517.6629"
+       x="309.27255"
+       style="font-style:normal;font-weight:normal;font-size:16.93805504px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:54.44375229px;fill:#ffffff;font-style:italic"
+         y="517.6629"
+         x="309.27255"
+         id="tspan4165"
+         sodipodi:role="line">THAT NFC</tspan></text>
+  </g>
+</svg>
