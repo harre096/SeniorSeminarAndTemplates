@@ -365,18 +365,18 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Limited Security via iCVV}
-  \begin{center}
-  \begin{minipage}{.9\textwidth}
-  \begin{block}{Contactless Credit Cards}
-    \begin{itemize}
-      \item{Card generates a pseudo-random \textit{Dynamic Card Validation Value} (iCVV) for each transaction}
-      \pause
-      \item{The iCVV is sent to point of sale and then validated by bank}
-    \end{itemize}
-  \end{block}
-  \end{minipage}
-  \end{center}
+  \vspace{6mm}
+  \begin{columns}[c] % the "c" option specifies center vertical alignment
+      \column{.45\textwidth} % column designated by a command
+        \begin{block}{Contactless Credit Cards}
+            \begin{itemize}
+              \item{Card generates a pseudo-random \textit{Dynamic Card Validation Value} (iCVV) for each transaction}
+              \item{The iCVV is sent to point of sale and then validated by bank}
+            \end{itemize}
+          \end{block}
+      \column{.45\textwidth}
+        \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{figures/cvv.png}
+      \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -846,24 +846,24 @@
 
 
 
-\begin{frame}
-\frametitle{Energy Harvesting}
-  \begin{center}
-  \begin{minipage}{.9\textwidth}
-  \begin{block}{Power Harvesting}
-    \begin{itemize}
-      \item{EnGarde has a battery independent from the phone, and maintains charge by harvesting power from NFC communication}
-      \pause
-      \vspace{1mm}
-      \item{Since EnGarde has its own battery, it can encounter a no-power state}
-      \pause
-      \vspace{1mm}
-      \item{Even if EnGarde is completely dead, it will fail safely}
-    \end{itemize}
-  \end{block}
-  \end{minipage}
-  \end{center}
-\end{frame}
+% \begin{frame}
+% \frametitle{Energy Harvesting}
+%   \begin{center}
+%   \begin{minipage}{.9\textwidth}
+%   \begin{block}{Power Harvesting}
+%     \begin{itemize}
+%       \item{EnGarde has a battery independent from the phone, and maintains charge by harvesting power from NFC communication}
+%       \pause
+%       \vspace{1mm}
+%       \item{Since EnGarde has its own battery, it can encounter a no-power state}
+%       \pause
+%       \vspace{1mm}
+%       \item{Even if EnGarde is completely dead, it will fail safely}
+%     \end{itemize}
+%   \end{block}
+%   \end{minipage}
+%   \end{center}
+% \end{frame}
 
 
 
